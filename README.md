@@ -296,6 +296,38 @@ Lorsqu'une fonction est située à l'intérieur d'une classe = **méthode**, car
 
 /** */ = commentaires de documentation
 
+=>Le code de démarrage d'un programme Java est contenu dans une fonction **main** (ou méthode). Cette fontion est elle-
+même contenue dans une classe, et cette classe appartient à un package.
+
+### Exécution du programme via le terminal
+
+En Java, il y a une correspondance directe entre:
+- les packages et les dossiers,
+- les classes et les fichiers.
+
+Pour éxécuter le programme sur l'ordinateur, l'on doit créer des dossiers qui correspondent aux packages, et des fichiers qui correspondent aux classes.
+ 
+Etapes principales:
+- Création dossier dans lequel sera tout le code. Cela correspond au dossier **root**,
+- Dans ce dossier, l'on crée un dossier hello qui correspond au nom du package,
+- Puis, création d'un fichier HelloWorld.java dans le dossier hello, cela correspond au nom de ma classe.
+
+(Dans le programme HelloWorld: le code est écrit dans la méthode principale d' une classe HelloWorld. Méthode qui se trouve dans un package hello)
+
+Voir dossier exercice_java_OP.
+
+Une fois le code à l'intérieur du fichier, l'on doit le convertir en code éxecutable par une machine (code machine).
+Quelque soit le langage de programmation, le code doit être traduit en un ensemble d'instructions qu'un ordinateur peut éxecuter = **code machine**.
+Code difficile à écrire pour un humain.
+
+Le langage dans lequel le code Java doit être transformé = **Bytecode, il faut pour cela utiliser le **compilateur javac**.
+C'est pour cela que les dossiers sont utiles.
+
+Via le terminal: 
+    dans le dossier root éxecuter
+
+    $ javac hello/HelloWorld.java
+
 
 
 
