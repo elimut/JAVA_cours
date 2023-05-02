@@ -105,7 +105,7 @@ Java va toujours exécuter le premier main.
     *djzhfijfh
     */
 
-    /** commentaires de documentation*/;
+    /** commentaires de documentation*/
 
 
 ## Objet 
@@ -132,10 +132,44 @@ Exemple:
 C'est le principe de base de la POO.
 **Une classe est un objet**.   
 
+En langage orienté objet nous sommes obligé d'avoir au minimum une classe (classe minimale). Le code ne pourrait s'exécuter. C'est un langage haut niveau.
 
 ## Types
 
-Type void et type any: void = aucun type et any = tous les types
+### Les types primitifs
+
+Les types de bases retrouvés dans les langages classiques:
+- **boolean**: true ou false, par défaut false,
+- **char**: caractères, espace mémoire 2 octets soit 16 bits (de 0 à 65535 caractères),
+- **long**: très grand nombres,
+- **int**: integer,
+- **short**:
+- **float**: décimaux,
+- **byte**:
+
+**La conversion de types implicites sans perte d'information d'un type primitif vers un type plus grand = **élargissement** avec l'ordre roissant suivant les types.
+
+La maîtrise des types permet d'avoir des applications très performantes,  meilleure gestion de l'espace mémoire.
+
+![les types primitifs en Java](img/../../TestJava/img/Les-types-primitifs-en-Java.jpg)
+
+
+
+
+*Type void et type any: void = aucun type et any = tous les types*
+
+
+## Bases numériques
+
+base numérique: décimale (10 -> 0 à 9),
+                binaire (2-> 0 à 1),
+                octale (8 -> 0 à 7),
+                hexadécimal (16 -> 0 à F).
+nombre entier: 12
+             12_333
+binaire -> 0b1100011
+           1_100_011
+hexadécimal -> 0xFB233
 
 
 ## Open Classroom:
