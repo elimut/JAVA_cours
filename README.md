@@ -81,11 +81,61 @@ Il existe deux conventions avec les {}:
     {
 
     }
-Voir fichier MainApp.java.
+Voir dossier TestJava
 Java va toujours exécuter le premier main.
 
 
+## Commentaires
 
+    /**class MainApp {
+
+    }
+    * ou
+    class MainApp 
+    {
+
+    }
+    */
+
+
+    //Commentaires:
+    //Pour un commentaire sur une seule ligne
+
+    /*En bloc,
+    *djzhfijfh
+    */
+
+    /** commentaires de documentation*/;
+
+
+## Objet 
+
+Quelque chose qui a un **nom** et des **attributs**.
+ Exemple:
+    siège -> nom
+    assise, dossier,... -> attributs
+
+Exemple:
+    voiture
+    nombre de roues, sièges
+    => **Elle a aussi des méthodes: avancer, accèlérer, tourner...**
+    Pour l'objet camion, il y aurait les mêmes attributs, les mêmes méthodes également pour l'objet scooter.
+    Ce sont des véhicules = nom commun.
+Ils **sont classés dans la catégorie véhicule**.
+Ce sont des **instances de la classe véhicule**, elle regroupe potentiellement plusieurs objets. Elle va faire hériter des choses constantes aux objets.
+Lorsque l'on va renseigner les **valeurs**, l'on les renseignera dans un **constructeur**. A chaque instance, on renseigne les nouvelles valeurs.
+On est pas obligé de tout utiliser, et l'on peut en rajouter.
+
+Exemple:
+    Un avion hérite de la classe véhicule.
+
+C'est le principe de base de la POO.
+**Une classe est un objet**.   
+
+
+## Types
+
+Type void et type any: void = aucun type et any = tous les types
 
 
 ## Open Classroom:
