@@ -157,7 +157,10 @@ La maîtrise des types permet d'avoir des applications très performantes,  meil
 
 
 *Type void et type any: void = aucun type et any = tous les types*
+## Constante
 
+**final** mot clef qu'en POO, variable qui ne peut être changée.
+final type nom en majuscule
 
 ## Bases numériques
 
