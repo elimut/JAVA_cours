@@ -49,6 +49,23 @@ https://download.oracle.com/java/20/latest/jdk-20_windows-x64_bin.exe (sha256)
 
 >Applications Java SE et Java EE: Java™ Platform, Standard Edition (Java SE) et Java Platform, Enterprise Edition (Java EE) sont des plateformes largement utilisées pour programmer des serveurs d'applications à l'aide du langage de programmation Java. Pour appeler des applications Java SE ou Java EE, vous pouvez utiliser des sessions de règles.
 
+![Installation JDK Path variables enviromment](img/1-installation_JDK.PNG)
+![Installation JDK Path variables enviromment](img/2-bin_JDK.PNG)
+![Installation JDK Path variables enviromment](img/3-javac_JDK.PNG)
+![Installation JDK Path variables enviromment](img/4-path_javac.png)
+![Installation JDK Path variables enviromment](img/5-path.png)
+
+Variables environnement: 
+chemin javac, dans variables système, path. **Penser à ajouter après bin\javac.exe**.
+
+Dans commande (wndows r):
+javac.exe
+java - version
+
+
+En JS, l'on a vu les constructeurs.
+En Java, on utilisera les objets, méthodes, classes ...
+
 ## Variables
 
 >Rappel:Une variable est un outil contenant une donnée, par exemple un mot ou un chiffre, et qui va être utilisée par un programme.Un programme manipule constamment des variables, soit que l'on a définies, soit qu'il a créées.Les variables contiennent des **valeurs**, ces variables sont gérées et enregistrées par l'ordinateur. Pour savoir ce qu'elles contiennent nous leurs donons un nom.
@@ -67,7 +84,7 @@ Les noms doivent:
 Pour utiliser les variables, il faut les créer, ou **déclarer**.
 >Il existe plusieurs types de variables, en fonction du type de valeur qu'elles contiennent.
 
-En Java, par exemple, si la variable contient un nombre entier elle sera déclarée en utilisant le mot clé **int** suivi du nom de la variable? On dit que ce sont des **ints**.
+En Java, par exemple, si la variable contient un nombre entier elle sera déclarée en utilisant le mot clé **int** suivi du nom de la variable? On dit que ce sont des **int**.
 
 Exemple:
 
