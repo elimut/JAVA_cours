@@ -2,9 +2,9 @@
 
 ## Sofiane:
 
-## Généralités
+### Généralités
 
-Portable: peut fonctionner sur n'importe quel langage d'exploitation.
+**Portable**: peut fonctionner sur n'importe quel langage d'exploitation.
 Robuste, sécurisé, empêche de compiler si bug.
 Langage de haut niveau: peu permissif.
 Orienté objet.
@@ -12,12 +12,12 @@ Multi-plateforme.
 Permet de développer des jeux vidéos, systèmes embarqués, logiciels, des choses graphiques, CRM...
 Offre l'avantage d'avoir des bibliothèques déjà comprises dans le langage Java.
 
-**Portabilité** -> n'importe quel système d'exploitation, graâc à la **JVM** = machine virtuelle Java.
+**Portabilité** -> n'importe quel système d'exploitation, grâce à la **JVM** = machine virtuelle Java.
 Traduit le code Java en code binaire.
 
-Orienté obbjet différent multi-paradigme (comme JS).
+Orienté objet différent multi-paradigme (comme JS).
 
-**POO = programmation orienté objet**.
+**POO = Programmation Orienté Objet**.
 
 Création de programme robuste et facile à maintenir.
 
@@ -35,7 +35,7 @@ Java Standard Edition, Java Enterprice Edition, Java Software Kit, ...
 **IoT**: internet des objets, utilisés au quotidien. 
 Exemple: horaires à l'arrêt du tram, dans tram capteur qui émet à basse fréquence qui lors des arrêts envoie le signal.
 
-## Mise en place
+### Mise en place
 
 - JSE: environnement d'exécution standard de jJava, outils, bibliothèques...  Java Standard Edition.
 - JDK: Ensemble d'outils nécessaires au développement (regroupe le JSE et outils de compilation (**javac**), JRE, outil de création jar: extension .jar = ). Pour les développeurs. Java Development Kit.
@@ -67,7 +67,7 @@ En Java, on utilisera les objets, méthodes, classes ...
 Java est un langage orienté objet, chacun de nos fichiers représentera une classe.
 Les conventions veulent que les classes, objets commencent par une majuscule.
 
-## Découverte
+### Découverte
 
 Ouvrir bloc-notes, puis le renommer MainApp.java.
 Ouverture via VS Code.
@@ -85,7 +85,7 @@ Voir dossier TestJava
 Java va toujours exécuter le premier main.
 
 
-## Commentaires
+### Commentaires
 
     /**class MainApp {
 
@@ -108,7 +108,7 @@ Java va toujours exécuter le premier main.
     /** commentaires de documentation*/
 
 
-## Objet 
+### Objet 
 
 Quelque chose qui a un **nom** et des **attributs**.
  Exemple:
@@ -134,9 +134,9 @@ C'est le principe de base de la POO.
 
 En langage orienté objet nous sommes obligé d'avoir au minimum une classe (classe minimale). Le code ne pourrait s'exécuter. C'est un langage haut niveau.
 
-## Types
+### Types
 
-### Les types primitifs
+#### Les types primitifs
 
 Les types de bases retrouvés dans les langages classiques:
 - **boolean**: true ou false, par défaut false,
@@ -157,12 +157,12 @@ La maîtrise des types permet d'avoir des applications très performantes,  meil
 
 
 *Type void et type any: void = aucun type et any = tous les types*
-## Constante
+### Constante
 
 **final** mot clef qu'en POO, variable qui ne peut être changée.
 final type nom en majuscule
 
-## Bases numériques
+### Bases numériques
 
 base numérique: décimale (10 -> 0 à 9),
                 binaire (2-> 0 à 1),
@@ -177,11 +177,11 @@ hexadécimal -> 0xFB233
 
 ## Open Classroom:
 
-## Variables
+### Variables
 
 >Rappel:Une variable est un outil contenant une donnée, par exemple un mot ou un chiffre, et qui va être utilisée par un programme.Un programme manipule constamment des variables, soit que l'on a définies, soit qu'il a créées.Les variables contiennent des **valeurs**, ces variables sont gérées et enregistrées par l'ordinateur. Pour savoir ce qu'elles contiennent nous leurs donons un nom.
 
-### Les nommer
+#### Les nommer
 
 Son nom doit reflèter son contenu.
 
@@ -190,7 +190,7 @@ Les noms doivent:
 - Pas raccourcis,ni abrégés,
 - Respecter le CamelCase:  une phrase composée de plusieurs mots sans espaces ni ponctuation. Le premier mot est écrit en minuscules et tous les autres mots commencent par une majuscule,
 
-## Les déclarer
+### Les déclarer
 
 Pour utiliser les variables, il faut les créer, ou **déclarer**.
 >Il existe plusieurs types de variables, en fonction du type de valeur qu'elles contiennent.
@@ -208,7 +208,7 @@ Quelques types:
 - **int** ne stocke que des entiers,
 - **float** ou **double** les nombres décimaux (ou flottants),
 
-### Modifier les valeurs des variables avec les opérateurs
+#### Modifier les valeurs des variables avec les opérateurs
 
 Une variable peut varier c'est à dire changer de valeur.
 Elle peut varier grâce à des **opérateurs**.
@@ -250,7 +250,7 @@ En bref:
 Pour affecter une valeur à une variable, l'on écrit une affectation.
 Elle se compose du nom de la variable, suivi de l'opérateur d' affectation, et ensuite de l' expression qui produit une valeur correspondant au type de la variable.
 
-#### Ecrire un code plus court avec des opérateurs d' affectation raccourcis
+##### Ecrire un code plus court avec des opérateurs d' affectation raccourcis
 
 Pour changer la valeur d'une variable avec des opérateurs de base l'on peut utiliser un raccourci:
 
@@ -263,7 +263,7 @@ Cela fonctionne donc avec:
 *=
 /=
 
-### Manipuler d' autres données que les nombres
+#### Manipuler d' autres données que les nombres
 
 Pour stocker différents contenus dans les variables, l' on doit définir le type de celle-ci.
 En effet, en fonction du type, les variables stockées dans la mémoire de l'ordinateur ne prennent pas la même place.
@@ -277,9 +277,9 @@ Exemple de déclaration de variables:
 
     String text = "blabla";
     int numberOfCat = 10;
-    double percentage = 0.0;
+    double percentage = 0.0d;
 
-### Les variables qui ne "changent pas"
+#### Les variables qui ne "changent pas"
 
 Ceratines valeurs n'ont pas besoin d' être modifiées. Elles restent telles qu' elles étaient au début;
 Ce sont des **constantes**.
@@ -303,7 +303,7 @@ Exemples:
     final String CHIEN = "blabla";
     ->modifier leurs valeurs entraînerait une erreur.
 
-### Spécifier le bon type de variable
+#### Spécifier le bon type de variable
 
 La seule façon de déclarer une variable en Java est de spécifier directement son type.
 
@@ -324,20 +324,20 @@ Déclarer sans valeur mais avec le type, permet au processeur de lui allouer un 
 
 >Parmi les types de données, il existe les types primitifs: ils existent par eux-mêmes. Exemples: int et double. L'on peut les combiner pour en faire des plus complexes. Dans les types primitifs, il existe notamment: **les types numériques** et **les chaînes**.
 
-### Les types numériques
+#### Les types numériques
 
 Les types numériques sont:
 - Les nombres entiers,
 - Les nombres décimaux.
   
-#### Les nombres entiers
+##### Les nombres entiers
 
 Ils sont déclarés comme toutes autres variables, avec un type, nom et une valeur.
 
     int count = 10;
     ->variable de nom count, type int et valeur 10.
 
-#### Les nombres décimaux
+##### Les nombres décimaux
 
 En Java,pour les décimaux il existe deux types différents:
 - **double**,
@@ -345,15 +345,15 @@ En Java,pour les décimaux il existe deux types différents:
 
 **Ces deux types ont le même but. La différence est que double est deux fois plus précis que float, il propose plus de décimales après la virgule (float deux décimales après la virgule).**
 
-    float lenght = 1876.19;
-    double width = 1258.6549745;
+    float lenght = 1876.19f;
+    double width = 1258.6549745d;
 
-    float lenght = 1256.16566;
+    float lenght = 1256f.16566;
     =>lenght = 1256.16;
 
 Il faut penser mémoire et décimale. De façon générale, en Java, l'on utilise le double par anticipation.
 
-### Mélanger des types numériques
+#### Mélanger des types numériques
 
 Dans les programmes informatiques, il faut parfois faire des opérations mathématiques.
 Cependant, les variables utilisées ne seront pas forcèment du même type (tant qu' elles restent numériques).
@@ -382,7 +382,7 @@ Exemple:
     float c = (float) a / b ;
     =>c = 2.5;
 
-### Les booléens
+#### Les booléens
 
 Pour valider une condition, l'on utilise un type de données spécifique = **boolean**.
 Une variable de type boolean ne peut contenir que deux valeurs: **true** ou **false**.
@@ -402,7 +402,7 @@ Exemple:
     isCodingJava = !isCodingJava;
     =>devient false
 
-### Le type String
+#### Le type String
 
 String, ou chaîne de caractères, permet de stocker du texte, ou plutôt un ensemble de caractères.
 Le String est un **objet**.
@@ -413,7 +413,7 @@ Exemple:
     String pet;
     String cat = "";
 
-#### Concaténation des variables de type String
+##### Concaténation des variables de type String
 
 Exemple:
 
@@ -435,9 +435,9 @@ L'on peut concaténer avec d'autres type de données:
 
 L'opérateur + permet la concaténation des chaînes et des nombres.
 
-## Ecrire une fonction
+### Ecrire une fonction
 
-### Notion de classe
+#### Notion de classe
 
 Une **classe** est un ensemble de:
 - Variables, nommées **attributs**,
@@ -476,7 +476,7 @@ Lorsqu'une fonction est située à l'intérieur d'une classe = **méthode**, car
 =>Le code de démarrage d'un programme Java est contenu dans une fonction **main** (ou méthode). Cette fontion est elle-
 même contenue dans une classe, et cette classe appartient à un package.
 
-### Exécution du programme via le terminal
+#### Exécution du programme via le terminal
 
 En Java, il y a une correspondance directe entre:
 - les packages et les dossiers,
@@ -491,13 +491,12 @@ Etapes principales:
 
 (Dans le programme HelloWorld: le code est écrit dans la méthode principale d' une classe HelloWorld. Méthode qui se trouve dans un package hello)
 
-Voir dossier exercice_java_OP.
 
 Une fois le code à l'intérieur du fichier, l'on doit le convertir en code éxecutable par une machine (code machine).
 Quelque soit le langage de programmation, le code doit être traduit en un ensemble d'instructions qu'un ordinateur peut éxecuter = **code machine**.
 Code difficile à écrire pour un humain.
 
-Le langage dans lequel le code Java doit être transformé = **Bytecode, il faut pour cela utiliser le **compilateur javac**.
+Le langage dans lequel le code Java doit être transformé = **Bytecode**, il faut pour cela utiliser le **compilateur javac**.
 C'est pour cela que les dossiers sont utiles.
 
 Via le terminal: 
@@ -505,6 +504,61 @@ Via le terminal:
 
     $ javac hello/HelloWorld.java
 
+
+## Exercices
+
+### Dossier TestJava
+#### Mise en place
+
+- **JSE**: environnement d'exécution standard de jJava, outils, bibliothèques...  Java Standard Edition.
+- **JDK**: Ensemble d'outils nécessaires au développement (regroupe le JSE et outils de compilation (**javac**), JRE, outil de création jar: extension .jar = ). Pour les développeurs. Java Development Kit.
+- **JRE**: plateforme Java, Java Runtime Envirronement, environnement d'exécution. Pour les user d'application, sans les développer.
+
+Installation JDK
+[Java SE](https://www.oracle.com/fr/java/) ->
+JDK Development Kit 20.0.1 downloads: 	
+[JDK install](https://download.oracle.com/java/20/latest/jdk-20_windows-x64_bin.exe) (sha256)
+
+Variables environnement: 
+chemin javac, dans variables système, path. **Penser à ajouter après bin\javac.exe**.
+
+Dans commande (wndows r):
+javac.exe
+java -version
+
+En JS, l'on a vu les constructeurs.
+En Java, on utilisera les objets, méthodes, classes ...
+Java est un langage orienté objet, chacun de nos fichiers représentera une classe.
+Les conventions veulent que les classes, objets commencent par une majuscule.
+
+Main correspond à la classe.
+
+Ouvrir bloc-notes, puis le renommer MainApp.java.
+Ouverture via VS Code.
+**Notre fichier représente une classe**.
+Il existe deux conventions avec les {}:
+
+    class MainApp {
+        
+    }
+    class MainApp 
+    {
+
+    }
+Java va toujours exécuter le premier main.
+
+## PowerShell
+
+Recherche power -> windows powershell, saisir le chemin après le chemin courant :cd suivi de ->  Desktop\GIT\TestJava.
+Cela change le chemin courant (cd permet de changer le répertoire).
+Puis ls entrée pour avoir le dossier et son contenu.
+
+Ensuite, saisie de javac ./MainApp.java pour compiler le code.
+![compilation](img/1-compilation_PowerShell.PNG)
+![compilation](img/2-MainApp.class.PNG)
+
+Le code pourra être exécuté => java MainApp
+![compilation](img/3-execution.PNG)
 
 
 
