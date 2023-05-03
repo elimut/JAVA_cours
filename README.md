@@ -89,7 +89,7 @@ Les conventions veulent que les classes, objets commencent par une majuscule.
     /** commentaires de documentation*/
 
 
-### Objet 
+### Objet et classe
 
 **Les conventions veulent que les classes, objets commencent par une majuscule.**
 
@@ -117,6 +117,15 @@ C'est le principe de base de la POO.
 
 En langage orienté objet nous sommes obligé d'avoir au minimum une classe (classe minimale). Le code ne pourrait s'exécuter. C'est un langage haut niveau.
 
+Pour créer un nouvel objet, on écrira que camion = **new** vehicule.
+Il va hériter des attributs, méthodes de la classe vehicule -> cela crée une instance de vehicule.
+
+La classe a une portée, pour la cosntruction d'une classe, on commence toujours par préciser la **portée**:
+- **public**: classe accessible partout depuis mon application,
+- **private**: accessible que depuis le fichier,
+suivi de class qui permet de construire un objet comme étant une classe, son nom comme le fichier et d'accolades.
+
+**Obligation nom de fichier et nom de classe**.
 ### Types
 
 #### Les types primitifs
