@@ -4,7 +4,7 @@
 
 ### Généralités
 
-**Portable**: peut fonctionner sur n'importe quel langage d'exploitation.
+**Portable**: peut fonctionner sur n'importe quel système d'exploitation.
 Robuste, sécurisé, empêche de compiler si bug.
 Langage de haut niveau: peu permissif.
 Orienté objet.
@@ -37,11 +37,11 @@ Exemple: horaires à l'arrêt du tram, dans tram capteur qui émet à basse fré
 
 ### Mise en place
 
-- JSE: environnement d'exécution standard de jJava, outils, bibliothèques...  Java Standard Edition.
-- JDK: Ensemble d'outils nécessaires au développement (regroupe le JSE et outils de compilation (**javac**), JRE, outil de création jar: extension .jar = ). Pour les développeurs. Java Development Kit.
+- JSE: environnement d'exécution standard de Java, outils, bibliothèques...  Java Standard Edition.
+- JDK: ensemble d'outils nécessaires au développement (regroupe le JSE et outils de compilation (**javac**), JRE, outil de création jar: extension .jar = ). Pour les développeurs. Java Development Kit.
 - JRE: plateforme Java, Java Runtime Envirronement, environnement d'exécution. Pour les user d'application, sans les développer.
 
->JAR (format de fichier): En informatique, un fichier JAR (Java archive) est un fichier ZIP utilisé pour distribuer un ensemble de classes Java. Ce format est utilisé pour stocker les définitions des classes, ainsi que des métadonnées, constituant l'ensemble d'un programme.
+>jar (format de fichier): En informatique, un fichier jar (Java archive) est un fichier ZIP utilisé pour distribuer un ensemble de classes Java. Ce format est utilisé pour stocker les définitions des classes, ainsi que des métadonnées, constituant l'ensemble d'un programme.
 
 [Java SE](https://www.oracle.com/fr/java/) ->
 JDK Development Kit 20.0.1 downloads: 	
@@ -66,25 +66,6 @@ En JS, l'on a vu les constructeurs.
 En Java, on utilisera les objets, méthodes, classes ...
 Java est un langage orienté objet, chacun de nos fichiers représentera une classe.
 Les conventions veulent que les classes, objets commencent par une majuscule.
-
-### Découverte
-
-Ouvrir bloc-notes, puis le renommer MainApp.java.
-Ouverture via VS Code.
-**Notre fichier représente une classe**.
-Il existe deux conventions avec les {}:
-
-    class MainApp {
-        
-    }
-    class MainApp 
-    {
-
-    }
-Voir dossier TestJava
-Java va toujours exécuter le premier main.
-
-
 ### Commentaires
 
     /**class MainApp {
@@ -155,7 +136,14 @@ La maîtrise des types permet d'avoir des applications très performantes,  meil
 
 ![les types primitifs en Java](img/../../TestJava/img/Les-types-primitifs-en-Java.jpg)
 
+float et double:
 
+[flota double](https://www.sololearn.com/Discuss/749938/*in-java-float-a-1-1f-what-is-this-f-stands-for)
+>Attribuez une valeur à la variable. Lorsque v
+affectez un nombre à virgule flottante à un `floa
+ajoutez un `f` ou `F` au nombre pour indiquer
+compilateur qu'il s'agit d'une valeur à virg
+flottante simple précision.*/
 
 
 *Type void et type any: void = aucun type et any = tous les types*
@@ -508,6 +496,97 @@ Via le terminal:
 
 
 ## Exercices
+
+### Syntaxe
+
+[exercices de syntaxe](https://www.w3schools.com/java/java_syntax.asp)
+
+
+    int x = 5, y = 6, z = 50;
+    System.out.println(x + y + z);
+
+    int myNum = 9;
+    float myFloatNum = 8.99f;
+    char myLetter = 'A';
+    boolean myBool = false;
+    String myText = "Hello World";
+
+    double myDouble = 9.78d;
+    int myInt = (int) myDouble;
+    ->Le cast est le fait de forcer le compilateur à considérer une variable comme étant d’un type qui n’est pas le type déclaré ou le type réel de la variable.
+    [cast Java](http://www.javacoding.fr/le-cast-en-java-downcasting-et-upcasting/)
+
+    String txt = "Hello";
+    System.out.println(txt.length());
+    ->Use the correct method to print the length of the txt string
+
+    String firstName = "John ";
+    String lastName = "Doe";
+    System.out.println(firstName.concat(lastName));
+    ->Use the correct method to concatenate two strings
+
+    String txt = "Hello Everybody";
+    System.out.println(txt.indexOf("e"));
+    ->Return the index (position) of the first occurrence of "e" in the following string
+
+    int x = 5;
+    int y = 10;
+    Math.max(x, y);
+    -> Use the correct method to find the highest value of x and y
+
+    int time = 20;
+    String result = (time < 18) ? "Good day." : "Good evening.";
+    System.out.println(result); 
+    ->Insert the missing parts to complete the following "short hand if...else statement" (ternary operator)
+
+    int i = 1;
+    while (i < 6) {
+    System.out.println(i);
+    i++;
+    }
+    ->Imprimer i tant que iest inférieur à 6
+
+    String[] cars  = {"Volvo", "BMW", "Ford"};
+    ->Create an array of type String called cars
+
+    String[] cars = {"Volvo", "BMW", "Ford"};
+    System.out.println(cars[1]);
+    ->Print the second item in the cars array
+
+    String[] cars = {"Volvo", "BMW", "Ford"};
+    for (String i : cars ) {
+    System.out.println(i);
+    }
+    ->Loop through the items in the cars array
+
+    int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} };
+    ->Insert the missing parts to create a two-dimensional array
+
+    // Create a checkAge() method with an integer variable called age
+    static void checkAge (int age) {
+    // If age is less than 18, print "Access denied"
+    if (age < 18) {
+        System.out.println("Access denied"); 
+
+    // If age is greater than, or equal to, 18, print "Access granted"
+    } 
+    else
+    {
+        System.out.println("Access granted"); 
+    }
+
+    } 
+
+    public static void main(String[] args) { 
+    // Call the checkAge method and pass along an age of 20
+    
+    checkAge
+    (
+    20
+    );
+    }
+
+
 ### Dossier TestJava
 #### Mise en place
 
@@ -549,7 +628,7 @@ Il existe deux conventions avec les {}:
     }
 Java va toujours exécuter le premier main.
 
-##### PowerShell
+#### PowerShell
 
 Recherche power -> windows powershell, saisir le chemin après le chemin courant :cd suivi de ->  Desktop\GIT\TestJava.
 Cela change le chemin courant (cd permet de changer le répertoire).
@@ -563,11 +642,89 @@ Le code pourra être exécuté => java MainApp
 ![compilation](img/3-execution.PNG)
 
 
+#### Programme
+
+En langage orienté objet nous sommes obligé d'avoir au minimum une classe (classe minimale). Le code ne pourrait s'exécuter.
+Ici = class MainApp. 
+
+    public class MainApp 
+    {
+        public static void main (String[] args)
+            {
+            /*Signature, publique: accessible partout, la JVM peut y *avoir accès. Recherchée par Java:les arguments ou *paramètres Liste de String
+            *Ce qui est dans la méthode sont des arguments
+            *Dans méthode main de type void, on peut placer des *arguments. Mais Java doit reconnaître la signature.
+            *static est accessible ici*/
+
+                System.out.println("Hello You!!!");
+
+            */équivalent de console.log, on doit indiquer la sortie
+            *System est un objet auquel on applique la méthode println*/
+            }
+    }
+
+    public class MainApp 
+    {
+        public static void main (String[] args)
+        {
+            int maVariable = 36;
+            /*déclaration d'une variable entier
+            *déclaration variable pas d'espace, accent, espace. *Commence par une lettre ou underscore: camelCase ou *snake_case*/
+            System.out.println(maVariable);
+            maVariable = 37;
+            System.out.println(maVariable);
+            maVariable = maVariable + 1;
+            System.out.println(maVariable);
+            autreMethode();
+            // ne fonctionne pas car dans la methode autreMethode pas de static, il faut permettre l'accès au code
+        }
+        //public void autreMethode()
+        public static void autreMethode()
+        {
+            System.out.println("test");
+            // rien ne s'affiche car pas invoqué dans main, il faut l'invoquer dans la méthode main
+        }
+    }
+    // "index" appelé, exécuté, la méthode main sera exécutée, c'est l'index de l'index
+
+    public class MainApp 
+    {
+        public static void main (String[] args)
+        {
+            final int MAVARIABLE = 36;
+            System.out.println(MAVARIABLE); 
+            /*MAVARIABLE = 37;
+            *System.out.println(MAVARIABLE);
+            *error because const*/
+        }
+    }
+
+    public class MainApp 
+    {
+        public static void main (String[] args)
+        {
+            // final float PI = 3.14;
+            // error
+            // final double PI = 3.14;
+            final float PI = 3.14f;
+            System.out.println(PI);
+            /*https://www.sololearn.com/Discuss/749938/*in-java-float-a-1-1f-what-is-this-f-stands-for
+            *Attribuez une valeur à la variable. Lorsque vous *affectez un nombre à virgule flottante à un `float`, *ajoutez un `f` ou `F` au nombre pour indiquer au *compilateur qu'il s'agit d'une valeur à virgule *flottante simple précision.*/
+        }
+    }
 
 
+## Nota Bene
+
+\n: retour à la ligne
+\t: tabulation
+\f: nouvelle page (file)
+\r: retour chariot avec saut de ligne
+\b: retour en arrière
 
 ## Sources
 
 [open classroom](https://openclassrooms.com/fr/courses/6173501-apprenez-a-programmer-en-java/6313896-declarez-des-variables)
 [jar](https://fr.wikipedia.org/wiki/JAR_(format_de_fichier))
 [Java SE et EE](https://www.ibm.com/docs/fr/odm/8.9.1?topic=application-java-se-java-ee-applications)
+[sololearn](https://www.sololearn.com/Discuss/749938/*in-java-float-a-1-1f-what-is-this-f-stands-for)
