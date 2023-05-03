@@ -110,6 +110,8 @@ Java va toujours exécuter le premier main.
 
 ### Objet 
 
+**Les conventions veulent que les classes, objets commencent par une majuscule.**
+
 Quelque chose qui a un **nom** et des **attributs**.
  Exemple:
     siège -> nom
@@ -506,7 +508,6 @@ Via le terminal:
 
 
 ## Exercices
-
 ### Dossier TestJava
 #### Mise en place
 
@@ -514,24 +515,25 @@ Via le terminal:
 - **JDK**: Ensemble d'outils nécessaires au développement (regroupe le JSE et outils de compilation (**javac**), JRE, outil de création jar: extension .jar = ). Pour les développeurs. Java Development Kit.
 - **JRE**: plateforme Java, Java Runtime Envirronement, environnement d'exécution. Pour les user d'application, sans les développer.
 
-Installation JDK
+1- Installation JDK: 
 [Java SE](https://www.oracle.com/fr/java/) ->
 JDK Development Kit 20.0.1 downloads: 	
 [JDK install](https://download.oracle.com/java/20/latest/jdk-20_windows-x64_bin.exe) (sha256)
 
-Variables environnement: 
-chemin javac, dans variables système, path. **Penser à ajouter après bin\javac.exe**.
+2- Variables environnement: 
+Chemin javac: dans variables système, path. 
+**Penser à ajouter après bin\javac.exe** et vérifier que Java est également en path.
 
-Dans commande (wndows r):
+3- Dans commande (wndows r):
 javac.exe
 java -version
 
 En JS, l'on a vu les constructeurs.
 En Java, on utilisera les objets, méthodes, classes ...
 Java est un langage orienté objet, chacun de nos fichiers représentera une classe.
-Les conventions veulent que les classes, objets commencent par une majuscule.
 
-Main correspond à la classe.
+
+Dans cet exercice, Main correspond à la classe.
 
 Ouvrir bloc-notes, puis le renommer MainApp.java.
 Ouverture via VS Code.
@@ -547,7 +549,7 @@ Il existe deux conventions avec les {}:
     }
 Java va toujours exécuter le premier main.
 
-## PowerShell
+##### PowerShell
 
 Recherche power -> windows powershell, saisir le chemin après le chemin courant :cd suivi de ->  Desktop\GIT\TestJava.
 Cela change le chemin courant (cd permet de changer le répertoire).
