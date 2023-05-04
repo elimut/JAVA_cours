@@ -126,6 +126,18 @@ La classe a une portée, pour la cosntruction d'une classe, on commence toujours
 suivi de class qui permet de construire un objet comme étant une classe, son nom comme le fichier et d'accolades.
 
 **Obligation nom de fichier et nom de classe**.
+**Une classe a toujours une fonction constructeur**.
+
+Voir chat.java, chien.java et App.java:
+Chaque fois que l'on fait un nouveau Chat => instance de la classe.
+
+Le mot clef **this** fait référence au contexte.
+
+Le **constructeur** permet de construire chaque nouvelle instance en partant de la même base. 
+
+Une méthode sauf main et une classe prennent des majuscules.
+
+
 ### Types
 
 #### Les types primitifs
