@@ -137,6 +137,21 @@ Le **constructeur** permet de construire chaque nouvelle instance en partant de 
 
 Une méthode sauf main et une classe prennent des majuscules.
 
+**Les arguments**:
+En java tout est typé.
+ public class Chat {
+    public  Chat() {
+        System.out.println("Le chat fait miaou-miaou" + " "+ this);
+    }
+    String mName; = attributs
+    int mAge;
+    boolean mVaccin;
+    
+}
+
+**Encapsulation**:
+voir chat et app.
+
 
 ### Types
 
