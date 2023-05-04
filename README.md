@@ -151,7 +151,18 @@ En java tout est typé.
 
 **Encapsulation**:
 voir chat et app.
+Permet de définir si on accès ou non depuis l'extérieur aux attributs.
+private, pubic => encapsulation.
+On parle d'accesseurs, méthodes accesseurs ? ou getter? Un accesseur est une méthode permettant de récupérer le contenu d'une donnée membre protégée??
 
+On peut encapsuler également les données.
+
+Les méthodes comme System.out.println() s'exécute directement, ..., on peut importer des bibliothèques Java comme Scanner.
+
+On peut invoquer des méthodes dans la classe.
+[getter setter](https://www.w3schools.com/java/java_encapsulation.asp)
+
+accesseur = getter
 
 ### Types
 
