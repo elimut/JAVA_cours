@@ -66,6 +66,7 @@ En JS, l'on a vu les constructeurs.
 En Java, on utilisera les objets, méthodes, classes ...
 Java est un langage orienté objet, chacun de nos fichiers représentera une classe.
 Les conventions veulent que les classes, objets commencent par une majuscule.
+
 ### Commentaires
 
     /**class MainApp {
@@ -120,7 +121,7 @@ En langage orienté objet nous sommes obligé d'avoir au minimum une classe (cla
 Pour créer un nouvel objet, on écrira que camion = **new** vehicule.
 Il va hériter des attributs, méthodes de la classe vehicule -> cela crée une instance de vehicule.
 
-La classe a une portée, pour la cosntruction d'une classe, on commence toujours par préciser la **portée**:
+La classe a une portée, pour la construction d'une classe, on commence toujours par préciser la **portée**:
 - **public**: classe accessible partout depuis mon application,
 - **private**: accessible que depuis le fichier,
 suivi de class qui permet de construire un objet comme étant une classe, son nom comme le fichier et d'accolades.
@@ -135,7 +136,7 @@ Le mot clef **this** fait référence au contexte.
 
 Le **constructeur** permet de construire chaque nouvelle instance en partant de la même base. 
 
-Une méthode sauf main et une classe prennent des majuscules.
+Une méthode sauf main et une classe prennent des majuscules?
 
 **Les arguments**:
 En java tout est typé.
