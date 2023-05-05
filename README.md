@@ -135,7 +135,13 @@ Le mot clef **this** fait référence au contexte.
 
 Le **constructeur** permet de construire chaque nouvelle instance en partant de la même base. 
 
-Une méthode sauf main et une classe prennent des majuscules.
+Une méthode sauf main et une classe prennent des majuscules?
+Dans une méthode, l'arguement doit être typ", lorsque c'est une classe on crée notre propre type.
+
+Variable => minuscule
+Classe qui sont des objets => majuscule
+
+
 
 **Les arguments**:
 En java tout est typé.
@@ -154,8 +160,14 @@ voir chat et app.
 Permet de définir si on accès ou non depuis l'extérieur aux attributs.
 private, pubic => encapsulation.
 On parle d'accesseurs, méthodes accesseurs ? ou getter? Un accesseur est une méthode permettant de récupérer le contenu d'une donnée membre protégée??
+Rend accessible les données de notre classe même si pas en public.
+
 
 On peut encapsuler également les données.
+
+Mutateur inverse d'un accesseur.
+Pour envoyer une valeur sans changer l'instance ->setter
+
 
 Les méthodes comme System.out.println() s'exécute directement, ..., on peut importer des bibliothèques Java comme Scanner.
 
