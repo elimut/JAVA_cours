@@ -173,6 +173,15 @@ Le **constructeur** permet de construire chaque nouvelle instance en partant de 
 Le constructeur permettra de créer des instances de la classe grâce à new:
 
 Exemple:
+<<<<<<< HEAD
+Dans une méthode, l'arguement doit être typé", lorsque c'est une classe on crée notre propre type.
+
+Variable => minuscule
+Classe qui sont des objets => majuscule
+
+
+=======
+>>>>>>> e1df4fcd1d6244df97220c50c01fb3f6f823eba4
 
 Création d'instances de la classe Chat:
 
@@ -214,10 +223,17 @@ Permet de définir si on accès ou non depuis l'extérieur aux attributs.
 => private, pubic => encapsulation.
 
 **On parle d'accesseurs, ou getter. Un accesseur est une méthode permettant de récupérer le contenu d'une donnée membre protégée**.
+Rend accessible les données de notre classe même si pas en public.
+
 
 On peut encapsuler également les données.
 
 >Les méthodes comme System.out.println() s'exécute directement, ..., on peut importer des bibliothèques Java comme Scanner.
+Mutateur inverse d'un accesseur.
+Pour envoyer une valeur sans changer l'instance ->setter
+
+
+Les méthodes comme System.out.println() s'exécute directement, ..., on peut importer des bibliothèques Java comme Scanner.
 
 [getter setter](https://www.w3schools.com/java/java_encapsulation.asp)
 
