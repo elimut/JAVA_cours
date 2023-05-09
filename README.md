@@ -12,7 +12,7 @@ Multi-plateforme.
 Permet de développer des jeux vidéos, systèmes embarqués, logiciels, des choses graphiques, CRM...
 Offre l'avantage d'avoir des bibliothèques déjà comprises dans le langage Java.
 
-**Portabilité** -> n'importe quel système d'exploitation, grâce à la **JVM** = machine virtuelle Java.
+**Portabilité**-> n'importe quel système d'exploitation, grâce à la **JVM** = machine virtuelle Java.
 Traduit le code Java en code binaire.
 
 Orienté objet différent multi-paradigme (comme JS).
@@ -37,9 +37,11 @@ Exemple: horaires à l'arrêt du tram, dans tram capteur qui émet à basse fré
 
 ### Mise en place
 
-- JSE: environnement d'exécution standard de Java, outils, bibliothèques...  Java Standard Edition.
-- JDK: ensemble d'outils nécessaires au développement (regroupe le JSE et outils de compilation (**javac**), JRE, outil de création jar: extension .jar = ). Pour les développeurs. Java Development Kit.
-- JRE: plateforme Java, Java Runtime Envirronement, environnement d'exécution. Pour les user d'application, sans les développer.
+Voit dossier TestJava
+
+- **JSE**: environnement d'exécution standard de Java, outils, bibliothèques...  Java Standard Edition.
+- **JDK**: ensemble d'outils nécessaires au développement (regroupe le JSE et outils de compilation (**javac**), JRE, outil de création jar: extension .jar = ). Pour les développeurs. Java Development Kit.
+- **JRE**: plateforme Java, Java Runtime Envirronement, environnement d'exécution. Pour les user d'application, sans les développer.
 
 >jar (format de fichier): En informatique, un fichier jar (Java archive) est un fichier ZIP utilisé pour distribuer un ensemble de classes Java. Ce format est utilisé pour stocker les définitions des classes, ainsi que des métadonnées, constituant l'ensemble d'un programme.
 
@@ -62,10 +64,6 @@ Dans commande (wndows r):
 javac.exe
 java - version
 
-En JS, l'on a vu les constructeurs.
-En Java, on utilisera les objets, méthodes, classes ...
-Java est un langage orienté objet, chacun de nos fichiers représentera une classe.
-Les conventions veulent que les classes, objets commencent par une majuscule.
 
 ### Commentaires
 
@@ -92,19 +90,23 @@ Les conventions veulent que les classes, objets commencent par une majuscule.
 
 ### Objet et classe
 
+En JS, l'on a vu les constructeurs.
+En Java, on utilisera les objets, méthodes, classes ...
+**Java est un langage orienté objet, chacun de nos fichiers représentera une classe.**
 **Les conventions veulent que les classes, objets commencent par une majuscule.**
 
-Quelque chose qui a un **nom** et des **attributs**.
- Exemple:
+Une classe est quelque chose qui a un **nom** et des **attributs**.
+
+ Exemples:
     siège -> nom
     assise, dossier,... -> attributs
 
-Exemple:
     voiture
     nombre de roues, sièges
-    => **Elle a aussi des méthodes: avancer, accèlérer, tourner...**
+    => Elle a aussi des méthodes: avancer, accèlérer, tourner...
     Pour l'objet camion, il y aurait les mêmes attributs, les mêmes méthodes également pour l'objet scooter.
     Ce sont des véhicules = nom commun.
+
 Ils **sont classés dans la catégorie véhicule**.
 Ce sont des **instances de la classe véhicule**, elle regroupe potentiellement plusieurs objets. Elle va faire hériter des choses constantes aux objets.
 Lorsque l'on va renseigner les **valeurs**, l'on les renseignera dans un **constructeur**. A chaque instance, on renseigne les nouvelles valeurs.
@@ -113,57 +115,126 @@ On est pas obligé de tout utiliser, et l'on peut en rajouter.
 Exemple:
     Un avion hérite de la classe véhicule.
 
-C'est le principe de base de la POO.
-**Une classe est un objet**.   
+C'est le principe de base de la POO : **une classe est un objet**.   
 
-En langage orienté objet nous sommes obligé d'avoir au minimum une classe (classe minimale). Le code ne pourrait s'exécuter. C'est un langage haut niveau.
+**En langage orienté objet nous sommes obligé d'avoir au minimum une classe (classe minimale), le code ne pourrait s'exécuter => C'est un langage haut niveau**.
 
 Pour créer un nouvel objet, on écrira que camion = **new** vehicule.
 Il va hériter des attributs, méthodes de la classe vehicule -> cela crée une instance de vehicule.
+New se rapporte au consctructeur.
 
 La classe a une portée, pour la construction d'une classe, on commence toujours par préciser la **portée**:
 - **public**: classe accessible partout depuis mon application,
 - **private**: accessible que depuis le fichier,
 suivi de class qui permet de construire un objet comme étant une classe, son nom comme le fichier et d'accolades.
 
-**Obligation nom de fichier et nom de classe**.
-**Une classe a toujours une fonction constructeur**.
+=>**Obligation nom de fichier et nom de classe**.
+=>**Une classe a toujours une fonction constructeur**.
 
 Voir chat.java, chien.java et App.java:
-Chaque fois que l'on fait un nouveau Chat => instance de la classe.
+Chaque fois que l'on fait un nouveau Chat => **instance de la classe**.
 
 Le mot clef **this** fait référence au contexte.
 
-Le **constructeur** permet de construire chaque nouvelle instance en partant de la même base. 
+Exemple (fichier App.java du dossier TestJava):
 
-Une méthode sauf main et une classe prennent des majuscules?
+Construction d'une classe:
+création fichier .java, le nom sera donné à la classe. 
+Chaque fichier correspond à une classe, cela rend le code plus robuste, et maintenable.
+Précision de la portée (public, private,...),
+suivie de class, type, qui permet de construire un objet comme étant une classe
+suivie du nom du fichier, nom de la classe
+suivie d'accolades car objet
+obligation nom de fichier et nom de classe
+void -> pour aucun type dans méthode main
+c'est le point de départ du programme, le point d'entrée
+
+
+
+#### Constructeur 
+
+    public class Animal {
+        private String aType;
+        private String aCri;
+        private int aPatte;
+        private boolean aQueue;
+
+        public Animal(String type, String cri, int patte, boolean queue){
+            this.aType = type;
+            this.aCri = cri;
+            this.aPatte = patte;
+            this.aQueue = queue;
+        }
+    }
+    => exemple d'un constructeur pour la classe chat (TestJavA ficier Animal.java);
+    L' on déclare les variables qui correspondent aux  attributs de la classse.
+
+Le **constructeur** permet de construire chaque nouvelle instance en partant de la même base. 
+Le constructeur permettra de créer des instances de la classe grâce à new:
+
+Exemple:
+
+Création d'instances de la classe Chat:
+
+    public class App {
+    public static void main(String[] args) {
+        Chat tom = new Chat();
+        Chat david = new Chat();
+    }
+    }
+    =>instance de la classe chat (TestJava fichier App.java et Chat.java)
+
+Son constructeur dans la classe Chat:
+
+    public class Chat {
+        public  Chat() {
+            System.out.println("Le chat fait miaou-miaou" + " "+ this);
+        }
+    }
+    =>Exécution App.java : Le chat fait miaou-miaou Chat@372f7a8d => identifiant de l'instance de Chat. Le nom et id de l'instance sont uniques.
+    Chaque instance de chat aura un emplacement dans la mémoire qui lui est dédié, d'où l'id. Ces espaces sont différents, donc chacun peut faire une action différente de l'autre en même temps.
 
 **Les arguments**:
-En java tout est typé.
+En java tout est **typé**.
  public class Chat {
     public  Chat() {
-        System.out.println("Le chat fait miaou-miaou" + " "+ this);
+        System.out.println("Le chat fait miaou-miaou" + " "+ this); => 
     }
-    String mName; = attributs
+    String mName; => attributs
     int mAge;
     boolean mVaccin;
     
 }
 
-**Encapsulation**:
+#### Encapsulation
+
 voir chat et app.
+
 Permet de définir si on accès ou non depuis l'extérieur aux attributs.
-private, pubic => encapsulation.
-On parle d'accesseurs, méthodes accesseurs ? ou getter? Un accesseur est une méthode permettant de récupérer le contenu d'une donnée membre protégée??
+=> private, pubic => encapsulation.
+
+**On parle d'accesseurs, ou getter. Un accesseur est une méthode permettant de récupérer le contenu d'une donnée membre protégée**.
 
 On peut encapsuler également les données.
 
-Les méthodes comme System.out.println() s'exécute directement, ..., on peut importer des bibliothèques Java comme Scanner.
+>Les méthodes comme System.out.println() s'exécute directement, ..., on peut importer des bibliothèques Java comme Scanner.
 
-On peut invoquer des méthodes dans la classe.
 [getter setter](https://www.w3schools.com/java/java_encapsulation.asp)
 
-accesseur = getter
+### Héritage
+
+Voir dossir TestJava fichier Animal.java et Chèvre.java:
+
+    public class Chevre extends Animal {
+        private boolean aChauve;
+        
+        public Chevre(String type, String cri, int patte, boolean queue, boolean chauve ){
+            super(type, cri, patte, queue);
+            this.aChauve = chauve;
+        }
+    }
+    =>The extends keyword extends a class (indicates that a class is inherited from another class).In Java, it is possible to inherit attributes and methods from one class to another. We group the "inheritance concept" into two categories:subclass (child) - the class that inherits from another classsuperclass (parent) - the class being inherited fromTo inherit from a class, use the extends keyword.
+    =>The super keyword refers to superclass (parent) objects.It is used to call superclass methods, and to access the superclass constructor.The most common use of the super keyword is to eliminate the confusion between superclasses and subclasses that have methods with the same name.
 
 ### Types
 
@@ -194,7 +265,8 @@ compilateur qu'il s'agit d'une valeur à virg
 flottante simple précision.*/
 
 
-*Type void et type any: void = aucun type et any = tous les types*
+*Type void et type any: void = aucun type et any = tous les types*.
+
 ### Constante
 
 **final** mot clef qu'en POO, variable qui ne peut être changée.
@@ -636,29 +708,6 @@ Via le terminal:
 
 
 ### Dossier TestJava
-#### Mise en place
-
-- **JSE**: environnement d'exécution standard de jJava, outils, bibliothèques...  Java Standard Edition.
-- **JDK**: Ensemble d'outils nécessaires au développement (regroupe le JSE et outils de compilation (**javac**), JRE, outil de création jar: extension .jar = ). Pour les développeurs. Java Development Kit.
-- **JRE**: plateforme Java, Java Runtime Envirronement, environnement d'exécution. Pour les user d'application, sans les développer.
-
-1- Installation JDK: 
-[Java SE](https://www.oracle.com/fr/java/) ->
-JDK Development Kit 20.0.1 downloads: 	
-[JDK install](https://download.oracle.com/java/20/latest/jdk-20_windows-x64_bin.exe) (sha256)
-
-2- Variables environnement: 
-Chemin javac: dans variables système, path. 
-**Penser à ajouter après bin\javac.exe** et vérifier que Java est également en path.
-
-3- Dans commande (wndows r):
-javac.exe
-java -version
-
-En JS, l'on a vu les constructeurs.
-En Java, on utilisera les objets, méthodes, classes ...
-Java est un langage orienté objet, chacun de nos fichiers représentera une classe.
-
 
 Dans cet exercice, Main correspond à la classe.
 
@@ -670,11 +719,86 @@ Il existe deux conventions avec les {}:
     class MainApp {
         
     }
+    ou:
     class MainApp 
     {
 
     }
 Java va toujours exécuter le premier main.
+
+#### Fichier APP.java
+
+    import java.util.Scanner;
+    // import bibliothèque interne de Java, utilisation de la méthode Scanner
+
+    public class App 
+    {
+        public static void main(String[] args)
+        {
+            Chat c = new Chat("David", 55, true);
+            Chat felix = new Chat("Felix", 44, false);
+            // System.out.println(c.mAge);
+            // Affichage de l'attribut âge de c :55
+            // System.out.println(c.mName);
+            // => error the fiel Cht.mName is not visible car en private = encapsulé!
+            // name(c);
+            //=> appel fonction name pour le chat c
+            // user(c);
+            // presentation(c);
+            felix.setVaccin(true);
+            //envoie données à l'objet felix
+            System.out.println(felix.getVaccin());
+        }
+
+        public static void name(Chat chat)
+        {
+            // System.out.println(c.mAge);
+            // System.out.println(c.mName);
+            // public. erreur, n'affiche pas la donnée
+            // String cName = c.getName();
+            System.out.println("c.mName: "+ chat.getName());
+            // https://codegym.cc/fr/groups/posts/getters-et-setters-en-java
+            // https://www.w3schools.com/java/java_encapsulation.asp
+        }
+
+        public static void user(Chat chat)
+        {
+            Scanner saisieUser = new Scanner(System.in);
+            System.out.println("Veuillez saisir m pour faire miauler le chat sinon y pour faire aboyer le chien");
+            String i = saisieUser.nextLine();
+            String miaule = "m";
+            System.out.println((i.equals(miaule)) ? "Le chat "+ chat.getName() +" fait miaou-miaou"  : "Le chien fait ouaf_ouaf");
+            // La equals()méthode compare deux chaînes et renvoie true si les chaînes sont égales et false sinon.
+        }
+
+    }
+    // Le constructeur a une mission primordiale: être le patron, tous les arguments doivent être présent
+
+    /*
+    * public static void presentation(Chat chat) {
+        String question = "Voulez vous que je miaule? (y/n)";
+        boolean continuePresentation = true;
+        do {
+            System.out.println(question);
+            Scanner saisieUtilisateur = new Scanner(System.in);
+            String resp = saisieUtilisateur.next();
+
+            if (resp.equals("y")) {
+                System.out.println(chat.getName() + "miaou");
+                continuePresentation = false;
+                saisieUtilisateur.close();
+            } else if (resp.equals("n")) {
+                    System.out.println("bye");
+                    continuePresentation = false;
+                    saisieUtilisateur.close();
+            } else {
+                question = "Je n'ai pas compris, y ou n?;
+                continuePresentation = true;
+            }       
+        }
+        while(continuePresentation);
+    }
+    */
 
 #### PowerShell
 
@@ -690,7 +814,7 @@ Le code pourra être exécuté => java MainApp
 ![compilation](img/3-execution.PNG)
 
 
-#### Programme
+#### Fichier MainApp.java
 
 En langage orienté objet nous sommes obligé d'avoir au minimum une classe (classe minimale). Le code ne pourrait s'exécuter.
 Ici = class MainApp. 
@@ -701,7 +825,7 @@ Ici = class MainApp.
             {
             /*Signature, publique: accessible partout, la JVM peut y *avoir accès. Recherchée par Java:les arguments ou *paramètres Liste de String
             *Ce qui est dans la méthode sont des arguments
-            *Dans méthode main de type void, on peut placer des *arguments. Mais Java doit reconnaître la signature.
+            *Dans méthode main de type void, on peut placer des arguments. Mais Java doit reconnaître la signature.
             *static est accessible ici*/
 
                 System.out.println("Hello You!!!");
@@ -760,6 +884,196 @@ Ici = class MainApp.
             *Attribuez une valeur à la variable. Lorsque vous *affectez un nombre à virgule flottante à un `float`, *ajoutez un `f` ou `F` au nombre pour indiquer au *compilateur qu'il s'agit d'une valeur à virgule *flottante simple précision.*/
         }
     }
+
+##### Conditions
+
+    public class MainApp 
+    {
+        public static void main (String[] args)
+        {
+            boolean value = (24 == 24);
+            System.out.println(value);
+            //renvoie true
+
+            boolean value1 = (24 === 24);
+            System.out.println(value);
+            // renvoie true
+            //comparaison d'expression
+
+            int age = 24;
+            int age1 = 20;
+            boolean value = (age == age1);
+            System.out.println(value);
+            // envoie false
+
+            int age2 = 24;
+            int age3 = 24;
+            boolean value1 = (age2 === age3);
+            System.out.println(value1);
+            // renvoie true
+            int value4 = 24;
+            if (value4 == 24){
+                System.out.println(value4);
+            }
+            // renvoie 24
+            if (value4 == 24){
+                System.out.println(value4);
+            }
+            // ne renvoie rien
+
+            int ageAd = 20;
+            if (ageAd >= 18 && ageAd < 64){
+                System.out.println(ageAd);
+            }else{
+                System.out.println("non");
+            }
+            ou
+            if (ageAd >= 18 && ageAd < 64)
+                System.out.println(ageAd);
+            else
+                System.out.println("non");
+            ou
+            String result = (ageAd >= 18 && ageAd < 64) ? "ageAd" : "non"; 
+            System.out.println(result);
+
+            //S'il est majeur, on vérifie qu'il a la majorité internationale
+            if (ageAd >= 18 && ageAd < 64){
+                System.out.println("Vous êtes majeur");
+                if(ageAd >= 21){
+                    System.out.println("Vous êtes majeur dans tous les pays");   
+                }else{
+                    System.out.println(" en France seulement");
+                }
+            }else{
+                System.out.println("mineur");
+            }
+
+            switch (ageAd){
+                case 17:
+                    System.out.println("mineur");
+                    break;
+                case 18, 19, 20:
+                    System.out.println("majeur en France");
+                    break;
+                default:
+                    System.out.println("majeur dans tous les pays");
+                    break;
+            }
+        }
+    }
+
+##### Boucles
+
+    public class MainApp 
+    {
+        public static void main (String[] args)
+        {
+            int i = 0;
+            while(i != 20){
+                System.out.println(i);
+                // i != 2 => boucle infinie, aucune condition d'arrêt: ajout d'incrémentation ou valeur pour en sortir
+                // i+=2;
+                // si l'on met un break à la place de i+=2 => une seule exécution
+                if (i == 10){
+                    break;
+                }
+                i++;
+                // si i différent de 20, je renvoie i et si i == 10 stop
+            }
+            int i = 0;
+            while(i != 20){
+                if (i == 10){
+                    continue;
+                    // continue instruction interrompt une itération (dans la boucle), si une condition spécifiée se produit, et continue avec l'itération suivante dans la boucle.
+                }
+                i++;
+                System.out.println(i);
+            }
+        }
+    }
+
+    public class MainApp 
+    {
+        public static void main (String[] args)
+        {
+            int i = 0;
+            do{
+                i++;
+                if (i == 10){
+                    continue;
+                }
+                System.out.println(i);
+            }
+            while(i != 20);
+        }
+    }
+
+    public class MainApp 
+    {
+        public static void main (String[] args)
+        {
+            int i = 0;
+            do{
+                i++;
+                if (i % 2 != 0){
+                    continue;
+                }
+                System.out.println(i);
+            }
+            while(i != 20);
+        }
+        // affiche les nombres pairs, continu bloque les impairs suite à la condition if
+    }
+
+    //afficher saisie user: scanner. Pour que Java puisse lire ce que vous tapez au clavier, vous allez devoir utiliser un objet de type Scanner. Cet objet peut prendre différents paramètres. !import -> toujours en haut du code
+
+    import java.util.Scanner;
+    public class MainApp 
+    {
+        public static void main (String[] args)
+        {
+            Scanner valeurDebut = new Scanner(System.in);
+            // instance de scanner
+            System.out.println("Veuillez saisir un entier :");
+            int i = valeurDebut.nextInt();
+            Scanner valeurFin = new Scanner(System.in);
+            System.out.println("Veuillez saisir un entier :");
+            int fin = valeurFin.nextInt();
+            valeurDebut.close();
+            valeurFin.close();
+            // attention à la fermeture du scanner
+            
+            if (i > fin){
+                System.out.println("la valeur de début doit être plus petite que celle de fin");
+            }
+            else{
+                System.out.println("Vous avez choisi: " + i +" "+ fin + ",les valeurs paires entre ces chiffres sont:");
+                do{
+                    i++;
+                    if (i % 2 != 0){
+                        continue;
+                    }
+                    System.out.println(i);
+                }
+                while(i != fin);
+            }
+        }
+    }
+    /
+
+    public class MainApp 
+    {
+        public static void main (String[] args)
+        {
+            
+            for (int i = 0; i < 10; i++){
+                System.out.println(i);
+            }
+            
+            // L’itération sur une collection à l’aide de structures de boucles traditionnelles comme la boucle for exige de connaître le nombre exact d’éléments dans la collection et elle permet également d’introduire des erreurs. Ce qui n’est pas du tout souhaité, surtout lorsque l’on traite du Big Data, car en plus de traiter une masse importante de données, la moindre erreur peut être fatale.
+        }
+    }
+
 
 
 ## Nota Bene
