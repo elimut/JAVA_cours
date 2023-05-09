@@ -87,6 +87,7 @@ https://download.oracle.com/java/20/latest/jdk-20_windows-x64_bin.exe (sha256)
 
 >Applications Java SE et Java EE: Java™ Platform, Standard Edition (Java SE) et Java Platform, Enterprise Edition (Java EE) sont des plateformes largement utilisées pour programmer des serveurs d'applications à l'aide du langage de programmation Java. Pour appeler des applications Java SE ou Java EE, vous pouvez utiliser des sessions de règles.
 
+
 ![Installation JDK Path variables enviromment](img/1-installation_JDK.PNG)
 ![Installation JDK Path variables enviromment](img/2-bin_JDK.PNG)
 ![Installation JDK Path variables enviromment](img/3-javac_JDK.PNG)
@@ -106,7 +107,7 @@ Un programme Java est composé d'un ou plus généralement plusieurs fichiers so
 Ces fichiers source possèdent l'extension .java. Ils peuvent contenir une ou plusieurs classes ou interfaces mais il ne peut y avoir qu'une seule classe ou interface déclarée publique par fichier. Le nom de ce fichier source doit obligatoirement correspondre à la casse près au nom de cette entité publique suivi de l'extension .java
 Il est nécessaire de compiler le source pour le transformer en J-code ou bytecode Java qui sera lui exécuté par la machine virtuelle. Pour être compilé, le programme doit être enregistré au format de caractères Unicode : une conversion automatique est faite par le JDK si nécessaire.
 
-Un compilateur Java, par exemple l'outil javac fourni avec le JDK est utilisé pour compiler chaque fichier source en fichier de classe possédant l'extension .class. Cette compilation génère pour chaque fichier source un ou plusieurs fichiers .class qui contiennent du bytecode.
+Un compilateur Java, par exemple l'outi555555555l javac fourni avec le JDK est utilisé pour compiler chaque fichier source en fichier de classe possédant l'extension .class. Cette compilation génère pour chaque fichier source un ou plusieurs fichiers .class qui contiennent du bytecode.
 
 Test.java -> javac Test.java -> Test.class (voir outils du JDK)
 
@@ -116,7 +117,7 @@ Test.java -> javac Test.java -> Test.class (voir outils du JDK)
 
 Exemple:
 
-    public class HelloWorld {
+    public class HelloWorld {5555555555
         public static void main(String[] args) {
         System.out.println(”Hello world”);
         }
@@ -127,13 +128,46 @@ Le tableau de chaînes de caractères args qui est un paramètre d’entrée de 
 Si la classe avait été exécutée par la ligne
 de commande java HelloWorld 4 toto _ , ce tableau contiendrait  éléments dont les valeurs seraient respectivement “4”, “toto” et “_”.
 
+Dans ce premier programme très simple, une seule classe est utilisée. Cependant, la conception d’un programme orienté-objet nécessite, pour des problèmes plus complexes, de créer plusieurs
+classes et la classe exécutable ne sert souvent qu’à instancier les premiers objets.
+La classe exécutable suivante crée un objet en instanciant la classe Rectangle et affiche sa surface :
+
+    public class RectangleMain {
+        public static void main(String[] args) {
+        Rectangle rect = new Rectangle(5, 10);
+        System.out.println(”La surface est ” + rect.surface());
+        }
+    }
+
+
 
 ### Les packages
 
-Les fichiers sources peuvent être organisés en packages. Les packages définissent une hiérarchie de noms, chaque nom étant séparé par le caractère point. Le nom d'un package est lié à une arborescence de sous-répertoires correspondant à ce nom.
+
+Les fichiers sources peuvent être organisés en **packages**. Les packages définissent une hiérarchie de noms, chaque nom étant séparé par le caractère point. Le nom d'un package est lié à une arborescence de sous-répertoires correspondant à ce nom.
 
 Ceci permet de structurer les sources d'une application car une application peut rapidement contenir plusieurs centaines voire milliers de fichiers source. Les packages permettent aussi d'assurer l'unicité d'une classe grâce à son nom pleinement qualifié (nom du package suivi du caractère «.» suivi du nom de la classe).
 
+>Un grand nombre de classes, fournies par Java SE, implémentent des données et traitements génériques utilisables par un grand nombre d’applications. Ces classes forment l’API (Application ProgrammerInterface)du langage Java. Une documentation en ligne pour l’API java est disponible à l’URL : http://docs.oracle.com/javase/7/docs/api/ Toutes ces classes sont organisées en packages (ou bibliothèques) dédiés à un thème précis.
+
+Pour accéder à une classe d’un package donné, il faut préalablement importer cette classe ou son package. Par exemple, la classe Date appartenant au package java.util qui implémente un ensemble de méthodes de traitement sur une date peut être importée de deux manières :
+- une seule classe du package est importée :
+
+        import java.util.Date;
+
+- toutes les classes du package sont importées (même les classes non utilisées) :
+  
+        import java.util.*  
+
+Le programme suivant utilise cette classe pour afficher la date actuelle :
+
+    import java.util.Date ;
+        public class DateMain {
+        public static void main(String[] args) {
+        Date today = new Date();
+        System.out.println(”Nous sommes le ” + today.toString());
+        }
+    }
 
 ### Les outils du JDK
 
