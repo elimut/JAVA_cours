@@ -112,6 +112,21 @@ Test.java -> javac Test.java -> Test.class (voir outils du JDK)
 
 **Pour exécuter une application, la classe servant de point d'entrée doit obligatoirement contenir une méthode ayant la signature public static void main(String[] args). Il est alors possible de fournir cette classe à la JVM qui va charger le ou les fichiers .class utiles à l'application et exécuter le code**.
 
+> L’exécution du programme commence par l’exécution d’une classe qui doit implémenter une méthode particulière “public static void main(String[] args)”. Les classes implémentant cette méthode sont appellées classes exécutables.
+
+Exemple:
+
+    public class HelloWorld {
+        public static void main(String[] args) {
+        System.out.println(”Hello world”);
+        }
+    }
+    =>affiche la chaîne de caractères Hello World
+
+Le tableau de chaînes de caractères args qui est un paramètre d’entrée de la méthode main contient des valeurs précisées à l’exécution. 
+Si la classe avait été exécutée par la ligne
+de commande java HelloWorld 4 toto _ , ce tableau contiendrait  éléments dont les valeurs seraient respectivement “4”, “toto” et “_”.
+
 
 ### Les packages
 
@@ -409,11 +424,13 @@ Voir dossir TestJava fichier Animal.java et Chèvre.java:
     =>The extends keyword extends a class (indicates that a class is inherited from another class).In Java, it is possible to inherit attributes and methods from one class to another. We group the "inheritance concept" into two categories:subclass (child) - the class that inherits from another classsuperclass (parent) - the class being inherited fromTo inherit from a class, use the extends keyword.
     =>The super keyword refers to superclass (parent) objects.It is used to call superclass methods, and to access the superclass constructor.The most common use of the super keyword is to eliminate the confusion between superclasses and subclasses that have methods with the same name.
 
-## Types, variables
+## Types de données
+
+### Variables
 
 >Rappel:Une variable est un outil contenant une donnée, par exemple un mot ou un chiffre, et qui va être utilisée par un programme.Un programme manipule constamment des variables, soit que l'on a définies, soit qu'il a créées.Les variables contiennent des **valeurs**, ces variables sont gérées et enregistrées par l'ordinateur. Pour savoir ce qu'elles contiennent nous leurs donons un nom.
 
-### Les nommer
+#### Les nommer
 
 Son nom doit reflèter son contenu.
 
@@ -422,7 +439,7 @@ Les noms doivent:
 - Pas raccourcis,ni abrégés,
 - Respecter le CamelCase:  une phrase composée de plusieurs mots sans espaces ni ponctuation. Le premier mot est écrit en minuscules et tous les autres mots commencent par une majuscule.
 
-### Les déclarer
+#### Les déclarer
 
 
 Pour utiliser les variables, il faut les créer, ou **déclarer**.
@@ -441,7 +458,7 @@ Quelques types:
 - **int** ne stocke que des entiers,
 - **float** ou **double** les nombres décimaux (ou flottants),...
 
-### Les types primitifs
+#### Les types primitifs
 
 
 En plus de ces types primitifs, le terme **void** est utilisé pour spécifier le retour vide ou une absence de paramètres d’une méthode. On peut remarquer que chaque type primitif possède une classe qui encapsule un attribut du type primitif. Par exemple, la classe Integer encapsule un attribut de type int et permet ainsi d’effectuer des opérations de traitement et des manipulations
@@ -473,7 +490,7 @@ float et double:
 *Type void et type any: void = aucun type et any = tous les types*.
 
 
-### Mélanger des types numériques
+#### Mélanger des types numériques
 
 Dans les programmes informatiques, il faut parfois faire des opérations mathématiques.
 Cependant, les variables utilisées ne seront pas forcèment du même type (tant qu' elles restent numériques).
@@ -502,7 +519,7 @@ Exemple:
     float c = (float) a / b ;
     =>c = 2.5;
 
-### Constante
+#### Constante
 
 Certaines valeurs n'ont pas besoin d' être modifiées. Elles restent telles qu' elles étaient au début;
 Ce sont des **constantes**.
@@ -526,7 +543,7 @@ Exemples:
     final String CHIEN = "blabla";
     ->modifier leurs valeurs entraînerait une erreur.
 
-### Les booléens
+#### Les booléens
 
 Pour valider une condition, l'on utilise un type de données spécifique = **boolean**.
 Une variable de type boolean ne peut contenir que deux valeurs: **true** ou **false**.
@@ -667,7 +684,7 @@ Exemple de déclaration de variables:
 
 ### Tableaux et matrices
 
-**Une variable est déclarée comme un tableau dès lors que des crochets sont présents soit après son type, soit après son identificateur**. 
+**Une variable est déclarée comme un tableau dès lors que des crochetssont présents soit après son type, soit après son identificateur**. 
 Les deux syntaxes suivantes sont acceptées pour déclarer un tableau d’entiers (même si la première, est plus intuitive) :
 
     int[] monTableau;
@@ -691,7 +708,7 @@ choix multiple). Dans tous ces cas, un bloc d’instruction est
 ● soit une instruction unique ;
 ● soit une suite d’instructions commençant par une accolade ouvrante “{” et se terminant par une accolade fermante “}”
 
-## Instructions conditionnelles
+### Instructions conditionnelles
 
 Syntaxe :
 
@@ -708,7 +725,7 @@ Syntaxe :
             a = a - 1 ;
         }
 
-## Instructions itératives
+### Instructions itératives
 
 Les instruction itératives permettent d’exécuter plusieurs fois un bloc d’instructions, et ce, jusqu’à ce qu’une condition donnée soit fausse. 
 Les trois types d’instruction itératives sont les
@@ -726,9 +743,55 @@ Syntaxe:
     while (a != b) a++;
 
 - Do While (faire tant que):
-le 
+  - le bloc est exécute;
+  - la condition (qui doit renvoyer une valeur booléenne) est évaluée. Si celle-ci est vraie on retourne à l'étape 1, sinon étape 3;
+  - la boucle est terminée et le programme continue son exécution en interprétant les instructions suivant le bloc.
 
-stop page 17 livret
+Syntaxe:
+
+    do <bloc> while (<condition>);
+    do a++
+    while (a != b);
+
+- for (pour faire): cette boucle est constituée de trois parties:
+(i) une initialisation (déclaration de variables locales à la boucle est autorisée dans cette partie); (ii) une condition d'arrêt; (iii) un ensemble d'instructions à exécuter après chaque itération (chacune de ces instructions est séparée par une virgule).
+  -  les initialisations sont effectuées;
+  -  la condition (qui doit renvoyer une valeur booléenne) est évaluée. Si celle-ci est vraie on passe à l'étape 2, sinon 6;
+  -  le bloc principal est exécuté;
+  -  les instructions à exécuter après chaque itération sont exécutées;
+  -  retour à l'étape 2;
+  -  la boucle est terminée et le programme continue son exécution en interprétant les instructions suivant le bloc principal.
+
+Syntaxe:
+
+    for (<init>;<condition>;<instr_post_itération>) <bloc>
+    for (int i = 0, j = 49 ; (i < 25) && (j >= 25); i++, j--) {
+        if (tab[i] > tab[j]) {
+        int tampon = tab[j];
+        }
+    }
+
+### Instructions break et continue
+
+L’instruction **break** est utilisée pour sortir immédiatement d’un bloc d’instructions (sans traiter les instructions restantes dans ce bloc). 
+Dans le cas d’une boucle on peut également utiliser l’instruction **continue** avec la différence suivante :
+- break : l’exécution se poursuit après la boucle (comme si la condition d’arrêt devenait vraie) ;
+- continue : l’exécution du bloc est arrêtée mais pas celle de la boucle. Une nouvelle itération du bloc commence si la condition d’arrêt est toujours vraie.
+- 
+ >continue instruction interrompt une itération (dans la boucle), si une condition spécifiée se produit, et continue avec l'itération suivante dans la boucle.
+
+Syntaxe:
+
+    for (int i = 0, j = 0 ; i < 100 ; i++) {
+        if (i > tab.length) {
+        break ;
+        }
+        if (tab[i] == null) {
+        continue ;
+        }
+        tab2[j] = tab[i];
+        j++;
+    }
 
 ## Ecrire une fonction
 
