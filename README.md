@@ -1,33 +1,55 @@
 # JAVA cours
 
-## Sofiane:
+![Logo Java](img/Java_Logo.svg.png)
+
+## Simplon
 
 ### Généralités
 
-**Portable**: peut fonctionner sur n'importe quel système d'exploitation.
-Robuste, sécurisé, empêche de compiler si bug.
-Langage de haut niveau: peu permissif.
-Orienté objet.
-Multi-plateforme.
-Permet de développer des jeux vidéos, systèmes embarqués, logiciels, des choses graphiques, CRM...
-Offre l'avantage d'avoir des bibliothèques déjà comprises dans le langage Java.
 
+Java est:
+
+**Interprété**:
+le code source est compilé en pseudo code ou bytecode puis exécuté par un interpréteur Java : la Java Virtual Machine (JVM). Ce concept est à la base du slogan de Sun pour Java : WORA (Write Once, Run Anywhere : écrire une fois, exécuter partout). En effet, le bytecode, s'il ne contient pas de code spécifique à une plate-forme particulière peut être exécuté et obtenir quasiment les mêmes résultats sur toutes les machines disposant d'une JVM.
+
+**Portable**: 
+il n'y a pas de compilation spécifique pour chaque plate forme. Le code reste indépendant de la machine sur laquelle il s'exécute. Il est possible d'exécuter des programmes Java sur tous les environnements qui possèdent une Java Virtual Machine. Cette indépendance est assurée au niveau du code source grâce à Unicode et au niveau du bytecode.
 **Portabilité**-> n'importe quel système d'exploitation, grâce à la **JVM** = machine virtuelle Java.
 Traduit le code Java en code binaire.
 
-Orienté objet différent multi-paradigme (comme JS).
+**Orienté objet**:
+comme la plupart des langages récents, Java est orienté objet. Chaque fichier source contient la définition d'une ou plusieurs classes qui sont utilisées les unes avec les autres pour former une application. Java n'est pas complètement objet car il définit des types primitifs (entier, caractère, flottant, booléen,...).
+
+**Fortement typé**:
+toutes les variables sont typées et il n'existe pas de conversion automatique qui risquerait une perte de données. Si une telle conversion doit être réalisée, le développeur doit obligatoirement utiliser un cast ou une méthode statique fournie en standard pour la réaliser.
+
+**Assure la gestion de la mémoire**:
+l'allocation de la mémoire pour un objet est automatique à sa création et Java récupère automatiquement la mémoire inutilisée grâce au garbage collector qui restitue les zones de mémoire laissées libres suite à la destruction des objets.
+
+**Sûr**:
+la sécurité fait partie intégrante du système d'exécution et du compilateur. Un programme Java planté ne menace pas le système d'exploitation. Il ne peut pas y avoir d'accès direct à la mémoire. L'accès au disque dur est réglementé dans une applet.
+Les applets fonctionnant sur le Web sont soumises aux restrictions suivantes dans la version 1.0 de Java :
+aucun programme ne peut ouvrir, lire, écrire ou effacer un fichier sur le système de l'utilisateur
+aucun programme ne peut lancer un autre programme sur le système de l'utilisateur
+toute fenêtre créée par le programme est clairement identifiée comme étant une fenêtre Java, ce qui interdit par exemple la création d'une fausse fenêtre demandant un mot de passe
+les programmes ne peuvent pas se connecter à d'autres sites Web que celui dont ils proviennent.
 
 **POO = Programmation Orienté Objet**.
 
-Création de programme robuste et facile à maintenir.
+>*Lorsqu’un programmeur écrit une application Java, le code compilé (appelé bytecode) s’exécute sur la plupart des systèmes d’exploitation (OS), y compris Windows, Linux et Mac OS. Java tire une grande partie de sa syntaxe des langages de programmation C et C++. La plate-forme Java (l’environnement dans lequel un programme s’exécute) se distingue du fait qu’elle s’exécute sur d’autres plateformes matérielles. Elle comporte deux composants : la machine virtuelle Java (Java VM) et l’interface de programmation d’applications Java (API Java).Java a été développée au milieu des années 1990 par James A. Gosling, un ancien informaticien de Sun Microsystems, avec Mike Sheridan et Patrick Naughton.Tous les programmes sont constitués d’entités représentant des concepts ou des choses physiques appelées « objets ». Les programmes Java se trouvent dans les ordinateurs de bureau, les serveurs, les appareils mobiles, les cartes à puce et les disques Blu-ray (BD). Le développement de programmes Java nécessite un kit de développement logiciel Java (SDK), qui comprend généralement un compilateur, un interpréteur, un générateur de documentation et d’autres outils utilisés pour produire une application complète.Le temps de développement peut être accéléré grâce à l’utilisation d’environnements de développement intégrés (IDE) – tels que JBuilder, Netbeans, Eclipse ou JCreator. Les IDE facilitent le développement d’interfaces graphiques, qui incluent des boutons, des zones de texte, des panneaux, des cadres, des barres de défilement et d’autres objets via des actions de glisser-déposer et de pointer-cliquer.*
 
-Langage très vaste!
+>*La plate-forme Java est indépendante et peut fonctionner sur tous les systèmes d’exploitation disponibles en ce qui concerne son développement et sa compilation. Cela est possible du fait du bytecode, un code qui est compréhensible par la machine. La plateforme se compose du langage Java, du kit de développement Java (JDK), de l’environnement d’exécution Java (JRE), du compilateur Java et de la « Java Virtual Machine » (JVM).*
 
->Lorsqu’un programmeur écrit une application Java, le code compilé (appelé bytecode) s’exécute sur la plupart des systèmes d’exploitation (OS), y compris Windows, Linux et Mac OS. Java tire une grande partie de sa syntaxe des langages de programmation C et C++. La plate-forme Java (l’environnement dans lequel un programme s’exécute) se distingue du fait qu’elle s’exécute sur d’autres plateformes matérielles. Elle comporte deux composants : la machine virtuelle Java (Java VM) et l’interface de programmation d’applications Java (API Java).Java a été développée au milieu des années 1990 par James A. Gosling, un ancien informaticien de Sun Microsystems, avec Mike Sheridan et Patrick Naughton.Tous les programmes sont constitués d’entités représentant des concepts ou des choses physiques appelées « objets ». Les programmes Java se trouvent dans les ordinateurs de bureau, les serveurs, les appareils mobiles, les cartes à puce et les disques Blu-ray (BD). Le développement de programmes Java nécessite un kit de développement logiciel Java (SDK), qui comprend généralement un compilateur, un interpréteur, un générateur de documentation et d’autres outils utilisés pour produire une application complète.Le temps de développement peut être accéléré grâce à l’utilisation d’environnements de développement intégrés (IDE) – tels que JBuilder, Netbeans, Eclipse ou JCreator. Les IDE facilitent le développement d’interfaces graphiques, qui incluent des boutons, des zones de texte, des panneaux, des cadres, des barres de défilement et d’autres objets via des actions de glisser-déposer et de pointer-cliquer.
+Il existe 2 types de programmes avec la version standard de Java : **les applets et les applications**. Une application autonome (stand alone program) est une application qui s'exécute sous le contrôle direct du système d'exploitation. Une applet est une application qui est chargée par un navigateur et qui est exécutée sous le contrôle d'un plug in de ce dernier.
 
->La plate-forme Java est indépendante et peut fonctionner sur tous les systèmes d’exploitation disponibles en ce qui concerne son développement et sa compilation. Cela est possible du fait du bytecode, un code qui est compréhensible par la machine. La plateforme se compose du langage Java, du kit de développement Java (JDK), de l’environnement d’exécution Java (JRE), du compilateur Java et de la « Java Virtual Machine » (JVM).
+Les principales différences entre une applet et une application sont :
+les applets n'ont pas de méthode main() : la méthode main() est appelée par la machine virtuelle pour exécuter une application.
+les applets ne peuvent pas être testées avec l'interpréteur. Elles doivent être testées avec l'applet viewer ou doivent être intégrées à une page HTML, elle même visualisée avec un navigateur disposant d'un plug in Java, .
 
-Oracle a racheté Java et en ont fait une licence GNU, semi-opensource.
+
+#### Notes
+
+*Oracle a racheté Java et en ont fait une licence GNU, semi-opensource.*
 
 JSE, JEE, JSK, ...
 Java Standard Edition, Java Enterprice Edition, Java Software Kit, ...
@@ -35,12 +57,13 @@ Java Standard Edition, Java Enterprice Edition, Java Software Kit, ...
 **IoT**: internet des objets, utilisés au quotidien. 
 Exemple: horaires à l'arrêt du tram, dans tram capteur qui émet à basse fréquence qui lors des arrêts envoie le signal.
 
-### Mise en place
+### Installation
 
-Voit dossier TestJava
+Voit dossier TestJava.
 
 - **JSE**: environnement d'exécution standard de Java, outils, bibliothèques...  Java Standard Edition.
 - **JDK**: ensemble d'outils nécessaires au développement (regroupe le JSE et outils de compilation (**javac**), JRE, outil de création jar: extension .jar = ). Pour les développeurs. Java Development Kit.
+Le JDK de Sun/Oracle fournit un ensemble d'outils qui permettent de réaliser des applications. Ces outils sont peu ergonomiques car ils s'utilisent en ligne de commandes mais, en contrepartie, ils peuvent toujours être utilisés.
 - **JRE**: plateforme Java, Java Runtime Envirronement, environnement d'exécution. Pour les user d'application, sans les développer.
 
 >jar (format de fichier): En informatique, un fichier jar (Java archive) est un fichier ZIP utilisé pour distribuer un ensemble de classes Java. Ce format est utilisé pour stocker les définitions des classes, ainsi que des métadonnées, constituant l'ensemble d'un programme.
@@ -63,6 +86,65 @@ chemin javac, dans variables système, path. **Penser à ajouter après bin\java
 Dans commande (wndows r):
 javac.exe
 java - version
+
+#### Compilation  et exécution
+
+Un programme Java est composé d'un ou plus généralement plusieurs fichiers source. N'importe quel éditeur de texte peut être utilisé pour éditer un fichier source Java.
+Ces fichiers source possèdent l'extension .java. Ils peuvent contenir une ou plusieurs classes ou interfaces mais il ne peut y avoir qu'une seule classe ou interface déclarée publique par fichier. Le nom de ce fichier source doit obligatoirement correspondre à la casse près au nom de cette entité publique suivi de l'extension .java
+Il est nécessaire de compiler le source pour le transformer en J-code ou bytecode Java qui sera lui exécuté par la machine virtuelle. Pour être compilé, le programme doit être enregistré au format de caractères Unicode : une conversion automatique est faite par le JDK si nécessaire.
+
+Un compilateur Java, par exemple l'outil javac fourni avec le JDK est utilisé pour compiler chaque fichier source en fichier de classe possédant l'extension .class. Cette compilation génère pour chaque fichier source un ou plusieurs fichiers .class qui contiennent du bytecode.
+
+Test.java -> javac Test.java -> Test.class (voir outils du JDK)
+
+**Pour exécuter une application, la classe servant de point d'entrée doit obligatoirement contenir une méthode ayant la signature public static void main(String[] args). Il est alors possible de fournir cette classe à la JVM qui va charger le ou les fichiers .class utiles à l'application et exécuter le code**.
+
+#### Les packages
+
+Les fichiers sources peuvent être organisés en packages. Les packages définissent une hiérarchie de noms, chaque nom étant séparé par le caractère point. Le nom d'un package est lié à une arborescence de sous-répertoires correspondant à ce nom.
+
+Ceci permet de structurer les sources d'une application car une application peut rapidement contenir plusieurs centaines voire milliers de fichiers source. Les packages permettent aussi d'assurer l'unicité d'une classe grâce à son nom pleinement qualifié (nom du package suivi du caractère «.» suivi du nom de la classe).
+
+
+#### Les outils du JDK
+
+##### Le compilateur javac
+
+Cet outil est le **compilateur** : il utilise un fichier source Java fourni en paramètre pour créer un ou plusieurs fichiers contenant le **bytecode** Java correspondant. Pour chaque fichier source, un fichier portant le même nom avec l'**extension .class** est créé si la compilation se déroule bien. Il est possible qu'un ou plusieurs autres fichiers .class soient générés lors de la compilation de la classe si celle-ci contient des classes internes. Dans ce cas, le nom du fichier des classes internes est de la forme classe$classe_interne.class. Un fichier .class supplémentaire est créé pour chaque classe interne. 
+
+Pour compiler tous les fichiers sources du répertoire:
+javac *.java.
+
+Pour compiler un fichier:
+saisie de javac ./fichier.java pour compiler le code.
+
+[développons en Java](https://www.jmdoudoux.fr/java/dej/chap-outils-jdk.htm) => erreur, sources, lignes de commande.
+
+##### L'interpréteur Java
+
+Ces deux outils sont les interpréteurs de bytecode : ils lancent le JRE, chargent les classes nécessaires et exécutent la méthode main de la classe passée en paramètre.
+
+java fichier.java
+
+##### L'outil jar
+
+JAR est le diminutif de Java ARchive. C'est un format de fichier qui permet de regrouper des fichiers contenant du bytecode Java (fichier .class) ou des données utilisées en tant que ressources (images, son, ...). Ce format est compatible avec le format ZIP : les fichiers contenus dans un jar sont compressés de façon indépendante du système d'exploitation.
+
+###### Lintérêt du format jar
+
+Son utilisation est particulièrement pertinente avec les applets (Petite application qui se télécharge lors de la consultation de certains sites Internet.), les beans et même les applications. En fait, le format jar est le format de diffusion des composants Java.
+
+Les fichiers jar sont compressés par défaut ce qui est particulièrement intéressant quelque soit leurs utilisations.
+
+Pour une applet, le browser n'effectue plus qu'une requête pour obtenir l'applet et ses ressources au lieu de plusieurs pour obtenir tous les fichiers nécessaires (fichiers .class, images, sons ...).
+
+Un jar peut être signé ce qui permet d'assouplir et d'élargir le modèle de sécurité, notamment celui des applets qui ont des droits restreints par défaut.
+
+Les beans doivent obligatoirement être diffusés sous ce format.
+
+Les applications sous forme de jar peuvent être exécutées automatiquement.
+
+Une archive jar contient un fichier manifest qui permet de préciser le contenu du jar et de fournir des informations sur celui-ci (classe principale, type de composants, signature ...).
 
 
 ### Commentaires
@@ -147,7 +229,7 @@ suivie du nom du fichier, nom de la classe
 suivie d'accolades car objet
 obligation nom de fichier et nom de classe
 void -> pour aucun type dans méthode main
-c'est le point de départ du programme, le point d'entrée
+=> c'est le point de départ du programme, le point d'entrée
 
 
 
@@ -1090,6 +1172,17 @@ Ici = class MainApp.
         }
     }
 
+### Dossier Java_variable_de_classe_heritage
+
+Variable de classe Java et héritage
+
+1- Création de la classe abonnement, et création de deux instances de la classe.
+
+2- Création d'une classe voiture.
+
+3- Faire valeurs par défaut, dans une classe mère et fille.
+Faire classe animal, et classe chat et chien.
+
 
 
 ## Nota Bene
@@ -1106,3 +1199,4 @@ Ici = class MainApp.
 [jar](https://fr.wikipedia.org/wiki/JAR_(format_de_fichier))
 [Java SE et EE](https://www.ibm.com/docs/fr/odm/8.9.1?topic=application-java-se-java-ee-applications)
 [sololearn](https://www.sololearn.com/Discuss/749938/*in-java-float-a-1-1f-what-is-this-f-stands-for)
+[développons en Java](https://www.jmdoudoux.fr/java/dej/chap-javadoc.htm)
