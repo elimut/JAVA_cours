@@ -143,7 +143,6 @@ La classe exécutable suivante crée un objet en instanciant la classe Rectangle
 
 ### Les packages
 
-
 Les fichiers sources peuvent être organisés en **packages**. Les packages définissent une hiérarchie de noms, chaque nom étant séparé par le caractère point. Le nom d'un package est lié à une arborescence de sous-répertoires correspondant à ce nom.
 
 Ceci permet de structurer les sources d'une application car une application peut rapidement contenir plusieurs centaines voire milliers de fichiers source. Les packages permettent aussi d'assurer l'unicité d'une classe grâce à son nom pleinement qualifié (nom du package suivi du caractère «.» suivi du nom de la classe).
@@ -423,9 +422,16 @@ Voir chat et app.
 
 Lors de la conception d’un programme orienté-objet, le programmeur doit identifier les objets et les données appartenant à chaque objet mais aussi des droits d’accès qu’ont les autres objets sur
 ces données. L’encapsulation de données dans un objet permet de cacher ou non leur existence aux autres objets du programme. Une donnée peut être déclarée en accès:
-- **public**: les autres objets peuvent accéder à la valeur de cette donnée ainsi que la modifier ;
+- **public**: les autres objets peuvent accéder à la valeur de cette donnée ainsi que la modifier. Ce mot-clé autorise n’importe quel
+objet à utiliser la classe ou la méthode déclarée comme publique. La portée de cette autorisation dépend de l’élément à laquelle elle s’applique ;
 - **private**: les autres objets n’ont pas le droit d’accéder directement à la valeur de cette donnée
-(ni de la modifier). En revanche, ils peuvent le faire indirectement par des méthodes de l’objet concerné (si celles-ci existent en accès public).
+(ni de la modifier). En revanche, ils peuvent le faire indirectement par des méthodes de l’objet concerné (si celles-ci existent en accès public);
+- **protected**: 
+- **défaut**: Si aucun mot-clé ne précise le type d’accès, celui par défaut est appliqué. En général, il est souhaitable que les types d’accès soient limités et le type d’accès public, qui est utilisé systématiquement par les programmeurs débutants, ne doit être utilisé que s’il est indispensable. Cette restriction permet d’éviter des erreurs lors d’accès à des méthodes ou de modifications de variables sans connaître totalement leur rôle.
+
+![Portées des autorisations](img/portee_des_autorisations.png)
+![Autorisations d'accès](img/Autorisation_d_acces.png)
+
 
 
 **On parle d'accesseurs, ou getter. Un accesseur est une méthode permettant de récupérer le contenu d'une donnée membre protégée**.
@@ -445,7 +451,128 @@ Les méthodes comme System.out.println() s'exécute directement, ..., on peut im
 
 ### Héritage
 
-Voir dossir TestJava fichier Animal.java et Chèvre.java:
+Dans certaines applications, les classes utilisées ont en commun certaines variables, méthodes de traitement ou même des **signatures** de méthode. Avec un langage de programmation orientéobjet, on peut définir une classe à différent niveaux d’abstraction permettant ainsi de factoriser
+certains attributs communs à plusieurs classes. Une classe générale définit alors un ensemble d’attributs qui sont partagés par d’autres classes, dont on dira qu’elles **héritent** de cette classe générale.
+
+#### Principe de l'héritage
+
+L’idée principale de l’héritage est d’organiser les classes de manière hiérarchique. La relation d’héritage est **unidirectionnelle** et, si une classe B hérite d’une classe A, on dira que B est une **sousclasse** de A. Cette notion de sous-classe signifie que la classe B est un cas particulier de la classe A et donc que les objets instanciant la classe B instancient également la classe A.
+
+Exemple:
+
+![Relations d'héritage](img/relations_d_heritage.png)
+Dans cet exemple, la classe Carré hérite de Rectangle qui hérite, ainsi que Cercle de Forme.
+Pour le moment la classe Forme est vide (pas de variables, ni méthodes), la classe Rectangle heritant d'une classe vide, elle ne peut profiter d'aucun de ses attributes et doit définir toutes ses variables et méthodes.
+Une notion d'héritage en Java se définit par le mot-clef **extends**:
+
+    public class Rectangle extends Forme {
+        private int largeur ;
+        private int longueur ;
+        public Rectangle(int x, int y) {
+        this.largeur = x ;
+        this.longueur = y ;
+        }
+        public int getLargeur() {
+        return this.largeur ;
+        }
+        public int getLongueur() {
+        return this.longueur;
+        }
+        public int surface() {
+        return this.longueur * this.largeur;
+        }
+        public void affiche() {
+        System.out.println(”rectangle ” + longueur + ”x” + largeur);
+        }
+    }   
+En revanche, la classe Carre peut bénéficier de la classe Rectangle et ne nécessite pas la réécriture de ces méthodes si celles-ci conviennent à la sous-classe. Toutes les méthodes et variables de la classe Rectangle ne sont néanmoins pas accessibles dans la classe Carre. Pour qu’un attribut
+puisse être utilisé dans une sous-classe, il faut que son type d’accès soit **public ou protected**, ou, si les deux classes sont situées dans le même package, qu’il utilise le type d’accès par **défaut**. Dans cet exemple, les variables longueur et largeur ne sont pas accessibles dans la class Carre qui doit passer par les méthodes getLargeur() et getLongueur(), déclarées comme publiques.
+
+##### Redéfinition 
+
+L’héritage intégral des attributs de la classe Rectangle pose deux problèmes:
+- il faut que chaque carré ait une longueur et une largeur égales ;
+- la méthode affiche écrit le mot “rectangle” en début de chaîne. Il serait souhaitable que ce soit “carré” qui s’affiche.
+De plus, les constructeurs ne sont pas hérités par une sous-classe. Il faut donc écrire un constructeur spécifique pour Carre. Ceci nous permettra de résoudre le premier problème en écrivant un constructeur qui ne prend qu’un paramètre qui sera affecté à la longueur et à la largeur. Pour at-
+tribuer une valeur à ces variables (qui sont privées), le constructeur de Carre doit faire appel au constructeur de Rectangle en utilisant le mot-clé **super** qui fait appel au constructeur de la classe supérieure comme suit :
+
+    public Carre(int cote) {
+        super(cote,cote);
+    }
+
+**L’appel au constructeur d’une classe supérieure doit toujours se situer dans un constructeur et toujours en tant que première instruction ; Si aucun appel à un constructeur d’une classe supérieure n’est fait, le constructeur fait appel implicitement à un constructeur vide de la classe supérieure (comme si la ligne super() était présente). Si aucun constructeur vide n’est accessible dans la classe supérieure, une erreur se produit lors de la compilation**.
+
+Le second problème peut être résolu par une redéfinition de méthode. On dit qu’une méthode d’une sous-classe redéfinit une méthode de sa classe supérieure, si elles ont la même signature mais que le traitement effectué est ré-écrit dans la sous-classe. Voici le code de la classe Carre où
+sont résolus les deux problèmes soulevés:
+
+    public class Carre extends Rectangle {
+        public Carre(int cote) {
+        super(cote, cote);
+        }
+        public void affiche() {
+        System.out.println(”carré ” + this.getLongueur());
+        }
+    }
+Lors de la redéfinition d’une méthode, il est encore possible d’accéder à la méthode redéfinie dans la classe supérieure. Cet accès utilise également le mot-clé super comme préfixe à la méthode. Dans notre cas, il faudrait écrire **super.affiche()** pour effectuer le traitement de la méthode
+affiche() de Rectangle.
+**Enfin, il est possible d’interdire la redéfinition d’une méthode ou d’une variable en introduisant le mot-clé final au début d’une signature de méthode ou d’une déclaration de variable. Il est aussi possible d’interdire l’héritage d’une classe en utilisant **final** au début de la déclaration d’une classe (avant le mot-clé class).**
+
+#### Polymorphisme
+
+**Le polymorphisme est la faculté attribuée à un objet d’être une instance de plusieurs classes.**
+Il a une seule classe **réelle** qui est celle dont le constructeur a été appelé en premier (c’est-à-dire la classe figurant après le new) mais il peut aussi être déclaré avec une classe supérieure à sa classe réelle. Cette propriété est très utile pour la création d’ensembles regroupant des objets de classes différentes comme dans l’exemple suivant :
+
+    Forme[] tableau = new Forme[4];
+    tableau[0] = new Rectangle(10,20);
+    tableau[1] = new Cercle(15);
+    tableau[2] = new Rectangle(5,30);
+    tableau[3] = new Carre(10);
+
+L’opérateur **instanceof** peut être utilisé pour tester l’appartenance à une classe comme suit :
+
+    for (int i = 0 ; i < tableau.length ; i++) {
+        if (tableau[i] instanceof Forme)
+            System.out.println(”element ” + i + ” est une forme”);
+        if (tableau[i] instanceof Cercle)
+            System.out.println(”element ” + i + ” est un cercle”);
+        if (tableau[i] instanceof Rectangle)
+            System.out.println(”element ” + i + ” est un rectangle”);
+        if (tableau[i] instanceof Carre)
+            System.out.println(”element ” + i + ” est un carré”);
+    }
+    => L’exécution de ce code sur le tableau précédent affiche le texte suivant :
+    element[0] est une forme
+    element[0] est un rectangle
+    element[1] est une forme
+    element[1] est un cercle
+    element[2] est une forme
+    element[2] est un rectangle
+    element[3] est une forme
+    element[3] est un rectangle
+    element[3] est un carré
+
+
+L’ensemble des classes Java, y compris celles écrites en dehors de l’API, forme une hiérarchie avec une **racine unique**. **Cette racine est la classe Object dont hérite toute autre classe**. En effet, si vous ne précisez pas explicitement une relation d’héritage lors de l’écriture d’une classe, celle-ci
+hérite par défaut de la classe Object. Grâce à cette propriété, des classes génériques de création et de gestion d’un ensemble, plus élaborées que les tableaux, regroupent des objets appartenant à la classe Object (donc de n’importe quelle classe).
+Une des propriétés induites par le polymorphisme est que l’interpréteur Java est capable de trouver le traitement à effectuer lors de l’appel d’une méthode sur un objet. Ainsi, pour plusieurs objets déclarés sous la même classe (mais n’ayant pas la même classe réelle), le traitement associé à
+une méthode donné peut être différent. Si cette méthode est redéfinie par la classe réelle d’un objet (ou par une classe située entre la classe réelle et la classe de déclaration), le traitement effectué est celui défini dans la classe la plus spécifique de l’objet et qui redéfinie la méthode.
+Dans notre exemple, la méthode affiche() est redéfinie dans toutes les sous-classes de Forme et les traitements effectués sont:
+
+    for (int i = 0 ; i < tableau.length ; i++) {
+        tableau[i].affiche();
+    }
+    => Résultat :
+    rectangle 10x20
+    cercle 15
+    rectangle 5x30
+    carré 10
+
+Dans l’état actuel de nos classes, ce code ne pourra cependant pas être compilé. En effet, la fonction affiche() est appelée sur des objets dont la classe déclarée est Forme mais celle-ci ne contient aucune fonction appelée affiche() (elle est seulement définie dans ses sous-classes).
+Pour compiler ce programme, il faut transformer la classe Forme en une interface ou une classe abstraite tel que cela est fait dans les sections suivantes.
+
+
+
+Voir dossier TestJava fichier Animal.java et Chèvre.java:
 
     public class Chevre extends Animal {
         private boolean aChauve;
@@ -457,6 +584,8 @@ Voir dossir TestJava fichier Animal.java et Chèvre.java:
     }
     =>The extends keyword extends a class (indicates that a class is inherited from another class).In Java, it is possible to inherit attributes and methods from one class to another. We group the "inheritance concept" into two categories:subclass (child) - the class that inherits from another classsuperclass (parent) - the class being inherited fromTo inherit from a class, use the extends keyword.
     =>The super keyword refers to superclass (parent) objects.It is used to call superclass methods, and to access the superclass constructor.The most common use of the super keyword is to eliminate the confusion between superclasses and subclasses that have methods with the same name.
+
+
 
 ## Types de données
 
@@ -867,6 +996,12 @@ Lorsqu'une fonction est située à l'intérieur d'une classe = **méthode**, car
 
 =>Le code de démarrage d'un programme Java est contenu dans une fonction **main** (ou méthode). Cette fontion est elle-
 même contenue dans une classe, et cette classe appartient à un package.
+
+Dans certains cas, il est plus judicieux d’attacher une variable ou une méthode à une classe plutôt qu’aux objets instanciant cette classe. Par exemple, la classe java.lang.Integer possède une variable MAX_VALUE qui représente la plus grande valeur qui peut être affectée à un entier.
+Or, cette variable étant commune à tous les entiers, elle n’est pas dupliquée dans tous les objets instanciant la classe Integer mais elle est associée directement à la classe Integer. Une telle variable est appelée variable de classe. De la même manière, il existe des méthodes de classe qui
+sont associées directement à une classe. Pour déclarer une variable ou méthode de classe, on utilise le mot-clé **static** qui doit être précisé avant le type de la variable ou le type de retour de la méthode.
+
+>la méthode main des classes exécutables est une méthode de classe car elle est appelée directement à partir d’une classe ; Lors de l’affichage d’une chaîne de caractères à l’écran par l’instruction System.out.println(...), on fait appel à la variable out de la classe java.lang.System qui est un objet représentant la sortie standard (l’écran) et sur laquelle on appelle la méthode println permettant d’afficher une chaîne de caractères.
 
 ## Exercices
 
