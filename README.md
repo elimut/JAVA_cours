@@ -1,7 +1,8 @@
 # JAVA cours
 
-![Logo Java](img/Java_Logo.svg.png)
-
+<p align="center" width="100%">
+    <img width="30%" src="img/Java_Logo.svg.png">
+</p>
 
 ## Généralités
 
@@ -9,7 +10,11 @@ Java est:
 
 **Interprété**:
 le code source est compilé en pseudo code ou bytecode puis exécuté par un **interpréteur** Java : la Java Virtual Machine (JVM). Ce concept est à la base du slogan de Sun pour Java : WORA (Write Once, Run Anywhere : écrire une fois, exécuter partout). En effet, le bytecode, s'il ne contient pas de code spécifique à une plate-forme particulière peut être exécuté et obtenir quasiment les mêmes résultats sur toutes les machines disposant d'une JVM.
-![Interprétation langage](img/Interpr%C3%A9tation_langage.PNG)
+
+Interprétation langage:
+<p align="center" width="100%">
+    <img width="70%" src="img/Interpr%C3%A9tation_langage.PNG">
+</p>
 
 **Portable**: 
 il n'y a pas de compilation spécifique pour chaque plate forme. Le code reste indépendant de la machine sur laquelle il s'exécute. Il est possible d'exécuter des programmes Java sur tous les environnements qui possèdent une Java Virtual Machine. Cette indépendance est assurée au niveau du code source grâce à Unicode et au niveau du bytecode.
@@ -79,20 +84,33 @@ Voit dossier TestJava.
 Le JDK de Sun/Oracle fournit un ensemble d'outils qui permettent de réaliser des applications. Ces outils sont peu ergonomiques car ils s'utilisent en ligne de commandes mais, en contrepartie, ils peuvent toujours être utilisés.
 - **JRE**: plateforme Java, Java Runtime Envirronement, environnement d'exécution. Pour les user d'application, sans les développer.
 
->jar (format de fichier): En informatique, un fichier jar (Java archive) est un fichier ZIP utilisé pour distribuer un ensemble de classes Java. Ce format est utilisé pour stocker les définitions des classes, ainsi que des métadonnées, constituant l'ensemble d'un programme.
+>*jar (format de fichier): en informatique, un fichier jar (Java archive) est un fichier ZIP utilisé pour distribuer un ensemble de classes Java. Ce format est utilisé pour stocker les définitions des classes, ainsi que des métadonnées, constituant l'ensemble d'un programme.*
 
 [Java SE](https://www.oracle.com/fr/java/) ->
 JDK Development Kit 20.0.1 downloads: 	
 https://download.oracle.com/java/20/latest/jdk-20_windows-x64_bin.exe (sha256)
 
->Applications Java SE et Java EE: Java™ Platform, Standard Edition (Java SE) et Java Platform, Enterprise Edition (Java EE) sont des plateformes largement utilisées pour programmer des serveurs d'applications à l'aide du langage de programmation Java. Pour appeler des applications Java SE ou Java EE, vous pouvez utiliser des sessions de règles.
+>*Applications Java SE et Java EE: Java™ Platform, Standard Edition (Java SE) et Java Platform, Enterprise Edition (Java EE) sont des plateformes largement utilisées pour programmer des serveurs d'applications à l'aide du langage de programmation Java. Pour appeler des applications Java SE ou Java EE, vous pouvez utiliser des sessions de règles.*
 
 
-![Installation JDK Path variables enviromment](img/1-installation_JDK.PNG)
-![Installation JDK Path variables enviromment](img/2-bin_JDK.PNG)
-![Installation JDK Path variables enviromment](img/3-javac_JDK.PNG)
-![Installation JDK Path variables enviromment](img/4-path_javac.png)
-![Installation JDK Path variables enviromment](img/5-path.png)
+Installation JDK, Path, variables enviromment:
+
+<p align="center" width="100%">
+    <img width="95%" src="img/1-installation_JDK.PNG">
+</p>
+<p align="center" width="100%">
+    <img width="95%" src="img/2-bin_JDK.PNG">
+</p>
+<p align="center" width="100%">
+    <img width="95%" src="img/3-javac_JDK.PNG">
+</p>
+<p align="center" width="100%">
+    <img width="95%" src="img/4-path_javac.png">
+</p>
+<p align="center" width="100%">
+    <img width="95%" src="img/4-path_javac.png">
+</p>
+
 
 Variables environnement: 
 chemin javac, dans variables système, path. **Penser à ajouter après bin\javac.exe**.
@@ -378,7 +396,7 @@ Son constructeur dans la classe Chat:
 L’usage de parenthèses à l’initialisation du **vecteur**, montre qu’une méthode est appelée pour l’instanciation. Cette méthode est un constructeur de la classe. Si le constructeur appelé
 nécessite des paramètres d’entrée, ceux-ci doivent être précisés entre ces parenthèses (comme lors d’un appel classique de méthode). 
 
->>Remarque importante :en Java, la notion de **pointeur** est transparente pour le programmeur. Il faut néanmoins savoir que toute variable désignant un objet est un **pointeur**. Il s’ensuit alors que le passage d’objets comme paramètres d’une méthode est toujours un passage par **référence**.A l’inverse, le passage de variables primitives comme paramètres est toujours un passage par **valeur**.
+>Remarque importante :en Java, la notion de **pointeur** est transparente pour le programmeur. Il faut néanmoins savoir que toute variable désignant un objet est un **pointeur**. Il s’ensuit alors que le passage d’objets comme paramètres d’une méthode est toujours un passage par **référence**.A l’inverse, le passage de variables primitives comme paramètres est toujours un passage par **valeur**.
 
 #### Accès aux variables et méthodes
 
@@ -429,7 +447,12 @@ objet à utiliser la classe ou la méthode déclarée comme publique. La portée
 - **protected**: 
 - **défaut**: Si aucun mot-clé ne précise le type d’accès, celui par défaut est appliqué. En général, il est souhaitable que les types d’accès soient limités et le type d’accès public, qui est utilisé systématiquement par les programmeurs débutants, ne doit être utilisé que s’il est indispensable. Cette restriction permet d’éviter des erreurs lors d’accès à des méthodes ou de modifications de variables sans connaître totalement leur rôle.
 
-![Portées des autorisations](img/portee_des_autorisations.png)
+Portées des autorisations et autorisations d'accès:
+
+<p align="center" width="100%">
+    <img width="95%" src="img/portee_des_autorisations.png">
+</p>
+
 ![Autorisations d'accès](img/Autorisation_d_acces.png)
 
 
@@ -460,7 +483,12 @@ L’idée principale de l’héritage est d’organiser les classes de manière 
 
 Exemple:
 
-![Relations d'héritage](img/relations_d_heritage.png)
+
+<p align="center" width="100%">
+    <img width="80%" src="img/relations_d_heritage.png">
+</p>
+
+
 Dans cet exemple, la classe Carré hérite de Rectangle qui hérite, ainsi que Cercle de Forme.
 Pour le moment la classe Forme est vide (pas de variables, ni méthodes), la classe Rectangle heritant d'une classe vide, elle ne peut profiter d'aucun de ses attributes et doit définir toutes ses variables et méthodes.
 Une notion d'héritage en Java se définit par le mot-clef **extends**:
@@ -798,7 +826,9 @@ Elle peut varier grâce à des **opérateurs**.
 |*|multiplication|
 |/|division|
 
-![Opérateurs Java](img/Operateurs_Java.png)
+<p align="center" width="100%">
+    <img width="80%" src="img/Operateurs_Java.png">
+</p>
 
 Exemple:
 
@@ -1020,7 +1050,20 @@ sont associées directement à une classe. Pour déclarer une variable ou métho
 ### Syntaxe
 
 [Exercices de syntaxe](https://www.w3schools.com/java/java_syntax.asp)
-
+=> System.out.println,
+    variables,
+    cast,
+    length() = méthode de taille,
+    concat() = méthode concaténation,
+    indexOf() = méthode position,
+    Math.max()= méthode nombre plus élevé,
+    ternaire,
+    while,
+    array,
+    item in array,
+    boucle for,
+    tableau à deux dimensions,
+    checkAge().
 
     int x = 5, y = 6, z = 50;
     System.out.println(x + y + z);
@@ -1094,16 +1137,12 @@ sont associées directement à une classe. Pour déclarer une variable ou métho
     {
         System.out.println("Access granted"); 
     }
-
     } 
 
     public static void main(String[] args) { 
     // Call the checkAge method and pass along an age of 20
-    
     checkAge
-    (
-    20
-    );
+    (20);
     }
 
 
