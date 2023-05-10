@@ -1045,6 +1045,8 @@ sont associées directement à une classe. Pour déclarer une variable ou métho
 
 >la méthode main des classes exécutables est une méthode de classe car elle est appelée directement à partir d’une classe ; Lors de l’affichage d’une chaîne de caractères à l’écran par l’instruction System.out.println(...), on fait appel à la variable out de la classe java.lang.System qui est un objet représentant la sortie standard (l’écran) et sur laquelle on appelle la méthode println permettant d’afficher une chaîne de caractères.
 
+------------------------------------------------ 
+
 ## Modélisation, diagramme
 
 ### UML
