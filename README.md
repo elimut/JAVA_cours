@@ -1059,6 +1059,10 @@ sont associées directement à une classe. Pour déclarer une variable ou métho
 ![UML](UML/Slide_UML_8.png)
 ![UML](UML/Slide_UML_9.png)
 
+### Diagrammes de classe
+
+
+
 ## Exercices
 
 ### Syntaxe
