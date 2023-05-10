@@ -600,12 +600,13 @@ Pour compiler ce programme, il faut transformer la classe Forme en une interface
 
 ### Interfaces
 
-**Une interface est un type, au même titre qu’une classe, mais abstrait et qui donc ne peut être instancié (par appel à new plus constructeur). Une interface décrit un ensemble de signatures de méthodes, sans implémentation, qui doivent être implémentées dans toutes les classes qui implémentent l’interface.** L’utilité du concept d’interface réside dans le regroupement de plusieurs classes, tel que chacune implémente un ensemble commun de méthodes, sous un même type. 
+**Une interface est un type, au même titre qu’une classe, mais abstrait et qui donc ne peut être instancié (par appel à new plus constructeur). Une interface décrit un ensemble de signatures de méthodes, sans implémentation, qui doivent être implémentées dans toutes les classes qui implémentent l’interface.** 
+L’utilité du concept d’interface réside dans le regroupement de plusieurs classes, tel que chacune implémente un ensemble commun de méthodes, sous un même type. 
 Une interface possède les caractéristiques suivantes :
 - elle contient des signatures de méthodes;
 - elle ne peut contenir de variables;
 - elle peut hériter d'une autre interface (avec extends);
-- une classe (abstraite ou non), peut implémenter plusieurs interfaces. La liste des interfaces implémentées doit alors figurer après le mot-clef **implemens** placé dans la déclaration de classe, en séparant chaque interface par une virgule.
+- une classe (abstraite ou non), peut implémenter plusieurs interfaces. La liste des interfaces implémentées doit alors figurer après le mot-clef **implements** placé dans la déclaration de classe, en séparant chaque interface par une virgule.
 
 
 
@@ -1047,7 +1048,7 @@ sont associées directement à une classe. Pour déclarer une variable ou métho
 
 ------------------------------------------------ 
 
-## Modélisation, diagramme
+## Modélisation, conception
 
 ### UML
 
