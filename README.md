@@ -319,8 +319,7 @@ On parle d'**encapsulation** pour désigner le regroupement de données dans une
 
 Pour écrire un programme avec un langage orienté-objet, le programmeur écrit uniquement
 des classes correspondant aux objets de son système. Les traitements à effectuer sont programmés
-dans les méthodes de ces classes qui peuvent faire appel à des méthodes d’autres classes. En géné-
-ral, on définit une classe, dite “exécutable”, dont une méthode peut être appelée pour exécuter le
+dans les méthodes de ces classes qui peuvent faire appel à des méthodes d’autres classes. En général, on définit une classe, dite “exécutable”, dont une méthode peut être appelée pour exécuter le
 programme
 
 ### Méthode constructeur 
