@@ -65,6 +65,27 @@ tel que chaque objet représente un élément qui doit être utilisé ou manipul
 
 Un objet peut être vu comme une entité regroupant un ensemble de données et de méthodes de traitement.
 
+
+Manipulation des objets, qui effectueront des actions.
+
+**Objet**:
+ensemble d' attributs et de méthodes stockés dans une variable.
+
+Exemple voiture:
+marque, nom = attributs,
+avancer = méthodes.
+
+Définition par des classes, modèle d'objet suivi par les objets.
+Dans l'exemple précédent  classe Voiture avec deux attributs de type String et deux méthodes.
+On va créer un objet voiture à partir du modèle.
+La voiture créée est une instance de la classe.
+Cela se fait via le **constructeur** dans la classe.
+Le constructeur a des paramètres pour créer l'objet.
+
+ 
+
+
+
 ### Notes
 
 *Oracle a racheté Java et en ont fait une licence GNU, semi-opensource.*
@@ -474,6 +495,8 @@ Les méthodes comme System.out.println() s'exécute directement, ..., on peut im
 ### Héritage
 
 Dans certaines applications, les classes utilisées ont en commun certaines variables, méthodes de traitement ou même des **signatures** de méthode. Avec un langage de programmation orientéobjet, on peut définir une classe à différent niveaux d’abstraction permettant ainsi de factoriser certains attributs communs à plusieurs classes. Une classe générale définit alors un ensemble d’attributs qui sont partagés par d’autres classes, dont on dira qu’elles **héritent** de cette classe générale.
+
+Permet donc de créer une classe générale, avec attributs, méthodes et constructeur.
 
 #### Principe de l'héritage
 
