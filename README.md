@@ -688,7 +688,7 @@ Quelques types:
 
 En plus de ces types primitifs, le terme **void** est utilisé pour spécifier le retour vide ou une absence de paramètres d’une méthode. On peut remarquer que chaque type primitif possède une classe qui encapsule un attribut du type primitif. Par exemple, la classe Integer encapsule un attribut de type int et permet ainsi d’effectuer des opérations de traitement et des manipulations
 qui seraient impossibles sur une simple variable de type int.
-A l’inverse du langage C, Java est un langage très rigoureux sur le typage des données. Il est interdit d’affecter à une variable la valeur d’une variable d’un type différent ¹ si cette seconde variable
+A l’inverse du langage C, Java est un langage très rigoureux sur le typage des données. Il est interdit d’affecter à une variable la valeur d’une variable d’un type différent si cette seconde variable
 n’est pas explicitement transformée. 
 
 Les types de bases retrouvés dans les langages classiques:
@@ -1583,3 +1583,8 @@ Faire classe animal, et classe chat et chien.
 [Java SE et EE](https://www.ibm.com/docs/fr/odm/8.9.1?topic=application-java-se-java-ee-applications)
 [sololearn](https://www.sololearn.com/Discuss/749938/*in-java-float-a-1-1f-what-is-this-f-stands-for)
 [développons en Java](https://www.jmdoudoux.fr/java/dej/chap-javadoc.htm)
+
+## Maj
+
+
+
