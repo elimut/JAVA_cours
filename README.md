@@ -1586,5 +1586,8 @@ Faire classe animal, et classe chat et chien.
 
 ## Maj
 
+Voir pdf.
+Tous les éléments doivent être du même type dans un tableau.
+toString renvoie représentation du tableau. copie du tableau.
 
 
