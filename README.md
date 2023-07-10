@@ -64,6 +64,27 @@ tel que chaque objet représente un élément qui doit être utilisé ou manipul
 
 Un objet peut être vu comme une entité regroupant un ensemble de données et de méthodes de traitement.
 
+
+Manipulation des objets, qui effectueront des actions.
+
+**Objet**:
+ensemble d' attributs et de méthodes stockés dans une variable.
+
+Exemple voiture:
+marque, nom = attributs,
+avancer = méthodes.
+
+Définition par des classes, modèle d'objet suivi par les objets.
+Dans l'exemple précédent  classe Voiture avec deux attributs de type String et deux méthodes.
+On va créer un objet voiture à partir du modèle.
+La voiture créée est une instance de la classe.
+Cela se fait via le **constructeur** dans la classe.
+Le constructeur a des paramètres pour créer l'objet.
+
+ 
+
+
+
 ### Notes
 
 *Oracle a racheté Java et en ont fait une licence GNU, semi-opensource.*
@@ -474,6 +495,8 @@ Les méthodes comme System.out.println() s'exécute directement, ..., on peut im
 
 Dans certaines applications, les classes utilisées ont en commun certaines variables, méthodes de traitement ou même des **signatures** de méthode. Avec un langage de programmation orientéobjet, on peut définir une classe à différent niveaux d’abstraction permettant ainsi de factoriser certains attributs communs à plusieurs classes. Une classe générale définit alors un ensemble d’attributs qui sont partagés par d’autres classes, dont on dira qu’elles **héritent** de cette classe générale.
 
+Permet donc de créer une classe générale, avec attributs, méthodes et constructeur.
+
 #### Principe de l'héritage
 
 L’idée principale de l’héritage est d’organiser les classes de manière hiérarchique. La relation d’héritage est **unidirectionnelle** et, si une classe B hérite d’une classe A, on dira que B est une **sousclasse** de A. Cette notion de sous-classe signifie que la classe B est un cas particulier de la classe A et donc que les objets instanciant la classe B instancient également la classe A.
@@ -664,7 +687,7 @@ Quelques types:
 
 En plus de ces types primitifs, le terme **void** est utilisé pour spécifier le retour vide ou une absence de paramètres d’une méthode. On peut remarquer que chaque type primitif possède une classe qui encapsule un attribut du type primitif. Par exemple, la classe Integer encapsule un attribut de type int et permet ainsi d’effectuer des opérations de traitement et des manipulations
 qui seraient impossibles sur une simple variable de type int.
-A l’inverse du langage C, Java est un langage très rigoureux sur le typage des données. Il est interdit d’affecter à une variable la valeur d’une variable d’un type différent ¹ si cette seconde variable
+A l’inverse du langage C, Java est un langage très rigoureux sur le typage des données. Il est interdit d’affecter à une variable la valeur d’une variable d’un type différent si cette seconde variable
 n’est pas explicitement transformée. 
 
 Les types de bases retrouvés dans les langages classiques:
@@ -1559,3 +1582,49 @@ Faire classe animal, et classe chat et chien.
 [Java SE et EE](https://www.ibm.com/docs/fr/odm/8.9.1?topic=application-java-se-java-ee-applications)
 [sololearn](https://www.sololearn.com/Discuss/749938/*in-java-float-a-1-1f-what-is-this-f-stands-for)
 [développons en Java](https://www.jmdoudoux.fr/java/dej/chap-javadoc.htm)
+
+## Maj
+
+Voir pdf.
+Tous les éléments doivent être du même type dans un tableau.
+toString renvoie représentation du tableau. copie du tableau.
+
+Pas de multihéritage (plusieurs extends) en Java, classe abstraite fait hériter  mais pas instanciée.
+
+
+Formes d’héritage en Java
+
+Java prend en charge quatre formes d’héritage :
+
+1. l’héritage simple : Une classe enfant ne peut hériter que d’une seule classe parentale.
+2. Héritage à plusieurs niveaux : Une classe enfant peut hériter d’une classe parent, qui à son tour peut hériter d’une autre classe parent.
+
+3. l’héritage hiérarchique : Une classe enfant peut hériter d’une classe parentale qui a plusieurs classes enfantines.
+
+4. héritage hybride : Une combinaison de deux formes d’héritage ou plus.
+
+Pourquoi l’héritage multiple est-il interdit en Java ?
+
+L’héritage multiple est la capacité d’une classe à hériter des propriétés et du comportement de plus d’une classe mère. Bien que cette fonctionnalité semble utile, elle peut entraîner plusieurs problèmes :
+
+1. Problème du diamant : si deux classes mères ont une méthode portant le même nom et la même signature, la classe enfant ne peut pas décider de laquelle hériter. Cela peut entraîner des ambiguïtés et des erreurs.
+
+2. Complexité : L’héritage multiple peut rendre le code plus complexe et difficile à comprendre.
+3. fragilité : Si l’une des classes mères change, cela peut affecter le comportement de la classe enfant de manière inattendue.
+
+Pollution de l’espace de noms : L’héritage multiple peut entraîner des conflits de noms et une pollution de l’espace de noms
+
+**Interface liens direct entre eux mais pas mêmes fonctions**
+Une interface est implémentée,on peut en implémenter plusieurs.
+
+ Les interfaces et les classes abstraites sont similaires dans le sens où elles sont toutes les deux utilisées pour définir des contrats ou des modèles que d'autres classes doivent suivre. Cependant, il y a quelques différences clés entre elles.
+
+Une classe abstraite est une classe qui ne peut pas être instanciée directement, ce qui signifie que tu ne peux pas créer un objet à partir d'une classe abstraite. Elle sert plutôt de modèle ou de base pour d'autres classes qui en héritent. Une classe abstraite peut avoir à la fois des méthodes concrètes (avec une implémentation) et des méthodes abstraites (sans implémentation). Les méthodes abstraites sont des méthodes qui n'ont pas de corps et doivent être implémentées par les classes dérivées.
+
+Une interface, en revanche, est un ensemble de méthodes abstraites (méthodes sans implémentation) qui définissent les actions que les classes qui les implémentent doivent prendre. Contrairement à une classe abstraite, une interface ne peut pas contenir de méthodes concrètes avec une implémentation. En plus des méthodes, une interface peut également définir des constantes. Les classes qui implémentent une interface doivent fournir une implémentation pour toutes les méthodes définies par l'interface.
+
+En résumé, une classe abstraite peut fournir à la fois des méthodes avec et sans implémentation, et elle est destinée à être utilisée comme une classe de base pour l'héritage. Une interface, en revanche, ne contient que des méthodes abstraites et des constantes, et elle définit un contrat que les classes qui l'implémentent doivent suivre.
+
+Il est important de noter qu'une classe peut hériter d'une seule classe abstraite, mais elle peut implémenter plusieurs interfaces. Cela permet une plus grande flexibilité dans la conception et permet à une classe de fournir différentes fonctionnalités en implémentant différentes interfaces.
+
+Interface , Qu'est-ce que c'est ? Une interface en programmation est un ensemble de méthodes (ou fonctions) et de constantes définies dans un langage de programmation. Elle définit les actions que peut effectuer un objet ou une classe, sans fournir de détails sur la manière dont ces actions sont réalisées. En d'autres termes, une interface définit ce qu'un objet peut faire, mais pas comment il le fait.
