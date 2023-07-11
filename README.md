@@ -1085,6 +1085,9 @@ sont associées directement à une classe. Pour déclarer une variable ou métho
 
 ### Diagrammes de classe
 
+Coder le schéma du projet suivant:
+[diagramme UML](http://www.lsv.fr/~schmitz/teach/2003_AP_Java/UML/)
+Voir dossier Java_codage_UML
 
 
 ## Exercices
